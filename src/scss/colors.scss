@@ -1,0 +1,38 @@
+$primary: #216869;
+$primary-light: lighten($primary, 15%);
+$primary-dark: darken($primary, 10%);
+$success: #49a078;
+$info: lighten($primary, 40%);
+$secondary: #9cc5a1;
+$light: lighten(#dce1de, 10%);
+$dark: #38423c;
+
+$background-gradient: linear-gradient(to right, $primary, $primary-light);
+$background-gradient-reverse: linear-gradient(
+  to left,
+  $primary,
+  $primary-light
+);
+
+html,
+body {
+  background-color: $light;
+}
+
+.background-path {
+  paint-order: fill;
+  stroke-width: 0px;
+  fill: $light;
+
+  &.primary {
+    fill: $primary;
+  }
+}
+
+.gradient-primary-background {
+  background: $background-gradient;
+}
+
+.gradient-primary-background-reverse {
+  background: $background-gradient-reverse;
+}

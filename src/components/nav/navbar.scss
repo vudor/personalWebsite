@@ -1,0 +1,36 @@
+@import '../../scss/colors.scss';
+
+$border-radius: 6px;
+$blur: 10px;
+
+.navbar-container {
+  -webkit-backdrop-filter: blur($blur);
+  backdrop-filter: blur($blur);
+  border-radius: $border-radius;
+}
+
+.navbar-start {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+
+  & .navbar-item:first-child {
+    border-bottom-left-radius: $border-radius;
+    border-top-left-radius: $border-radius;
+  }
+
+  & .navbar-item:last-child {
+    border-bottom-right-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+
+  & .navbar-item {
+    background-color: rgba($dark, 0.4);
+
+    &.is-active,
+    &:hover {
+      background-color: rgba($primary-dark, 0.8) !important;
+    }
+  }
+}

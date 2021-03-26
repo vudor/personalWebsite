@@ -1,0 +1,45 @@
+@import './colors.scss';
+
+/* center block element vertically and horizontally in absolute positioning */
+.absolutely-centered {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+i.fa-4x {
+  font-size: 4em;
+}
+
+span.icon.is-x-large {
+  height: 6em;
+  width: 6em;
+}
+
+.elevation {
+  $elevation: 6px;
+  $opacity: 0.5;
+  padding: 0 !important;
+  -webkit-box-shadow: 0 0 $elevation 0 rgba(0, 0, 0, $opacity);
+  -moz-box-shadow: 0 0 $elevation 0 rgba(0, 0, 0, $opacity);
+  box-shadow: 0 0 $elevation 0 rgba(0, 0, 0, $opacity);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html,
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

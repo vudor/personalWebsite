@@ -1,0 +1,14 @@
+{
+  "socialMediaButtons": [
+    {
+      "iconName": "fab fa-linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/kevelopment"
+    },
+    {
+      "iconName": "fab fa-github",
+      "label": "Github",
+      "url": "https://github.com/vudor"
+    }
+  ]
+}

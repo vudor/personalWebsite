@@ -1,0 +1,57 @@
+{
+  "title": "My Experience",
+  "subtitle": "Work & Education",
+  "jobs": [
+    {
+      "title": "IT-Consultant",
+      "company": "Lufthansa Industry Solutions TS GmbH",
+      "start": "12.2019",
+      "end": "12.2020",
+      "description": "Als Full-Stack JavaScript Entwickler den Kunden Volkswagen AG beraten und globale Systeme weiterentwickelt",
+      "qualifications": [
+        "Teil des agilen 3D- Echtzeitrendering-Projektes, für die Modernisierung der Media-On-Demand Lösung des Online-Car-Configurator der Volkswagen AG",
+        "Überführung von fachlichen in technische Anforderungen mit anschließender Umsetzung",
+        "Qualitätssicherung der Anforderungen durch Testen in einer Cloud-Umgebung",
+        "Unterstützung bei der Einführung von automatisierten End-to-End Tests für die Frontends"
+      ]
+    },
+    {
+      "title": "Application-Developer",
+      "company": "meetingmasters.de e.K.",
+      "start": "04.2018",
+      "end": "11.2019",
+      "description": "Als Full-Stack Java Entwickler an der Weiterentwicklung folgender Systeme beteiligt",
+      "qualifications": [
+        "Teilnehmermanagement-System moreEvent",
+        "Hotelbuchungs-Engine",
+        "Intranet-Anwendung zur Rechnungslegung"
+      ]
+    },
+    {
+      "title": "Internship Application-Development",
+      "company": "meetingmasters.de e.K.",
+      "start": "10.2017",
+      "end": "03.2018",
+      "description": "Begleitendes Praktikum zur Abschlussarbeit 'Modernisierung einer Webanwendung zur Verwaltung und Darstellung von Hoteldaten'",
+      "qualifications": []
+    }
+  ],
+  "paths": [
+    {
+      "path": "M 0.032 200 C -216.875 -30.799 260.428 280.049 1457.64 81.804 C 2490.128 -89.165 2583.268 233.667 1920.032 200",
+      "opacity": 0.5
+    },
+    {
+      "path": "M 0 200 C -379.011 -213.229 215.41 296.265 882.485 146.957 C 2184.791 -144.531 2464.375 102.017 1920 200",
+      "opacity": 0.5
+    },
+    {
+      "path": "M -0.015 200 C -619.858 -253.721 690.118 332.398 1421.772 122.259 C 2430.357 -167.418 2095.301 211.209 1919.985 200",
+      "opacity": 0.5
+    },
+    {
+      "path": "M 0 200 C -380.658 -40.615 74.288 273.767 1092.952 172.139 C 2134.33 68.245 2153.315 97.69 1920 200",
+      "opacity": 1
+    }
+  ]
+}

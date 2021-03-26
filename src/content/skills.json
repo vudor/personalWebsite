@@ -1,0 +1,16 @@
+{
+  "qualities": [
+    "Frontend-Development nach Material-Design und Responsive Design Guidelines",
+    "Backend-Development nach Clean-Code-Prinzipien",
+    "Vollintegratives End-2-End Testing",
+    "Arbeit in interdisziplinären Teams",
+    "Agile Entwicklungsmethoden nach Scrum",
+    "Hohe Anpassungsfähigkeit und Auffassungsgabe"
+  ],
+  "techStack": {
+    "languages": ["fab fa-js-square", "fab fa-java"],
+    "frameworks": ["fab fa-angular", "fab fa-react", "fab fa-node"],
+    "tools": ["fab fa-gulp", "fab fa-jira", "fab fa-npm", "fab fa-yarn"],
+    "misc": ["fab fa-aws", "fab fa-github", "fab fa-gitlab", "fab fa-jenkins"]
+  }
+}
