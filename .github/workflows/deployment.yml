@@ -1,0 +1,24 @@
+name: Run Deployment Pipeline
+on:
+  push:
+    branches:
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - name: Install modules
+        run: yarn
+      - name: Build production
+        run: yarn build
+      - name: Push to github.io
+        uses: cpina/github-action-push-to-another-repository@master
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: "public"
+          destination-github-username: "vudor"
+          destination-repository-name: "vudor.github.io"
+          user-email: kevinadam@gmx.de
+          target-branch: "main"
