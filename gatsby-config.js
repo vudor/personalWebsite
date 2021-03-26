@@ -1,41 +1,49 @@
 module.exports = {
   siteMetadata: {
-    title: 'Kevelopment',
-    titleTemplate: '%s · Software Development and Consulting',
-    author: 'Kevin Adam',
-    siteUrl: 'https://www.kevelopment.dev',
-    image: '/src/images/profile.jpg',
-    lang: 'en',
+    title: "Kevelopment",
+    titleTemplate: "%s · Software Development and Consulting",
+    author: "Kevin Adam",
+    siteUrl: "https://www.kevelopment.dev",
+    image: "/src/images/profile.jpg",
+    lang: "en",
     description:
-      'Gatsby Portfolio Website for Kevin Adam - Freelance Software Developer, IT-Consultant and Lecturer',
+      "Gatsby Portfolio Website for Kevin Adam - Freelance Software Developer, IT-Consultant and Lecturer",
   },
   plugins: [
-    'gatsby-plugin-sass',
-    'gatsby-plugin-image',
+    "gatsby-plugin-sass",
+    "gatsby-plugin-image",
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sitemap',
+    `gatsby-transformer-remark`,
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap",
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        policy: [{ userAgent: '*', allow: '/' }],
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
-        icon: 'src/images/icon.png',
+        icon: "src/images/icon.png",
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'images',
-        path: './src/images/',
+        name: "markdown-content",
+        path: `${__dirname}/src/content/md`,
       },
-      __key: 'images',
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `./src/images/`,
+      },
+      __key: "images",
     },
   ],
 };
