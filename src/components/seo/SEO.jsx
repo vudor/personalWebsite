@@ -1,6 +1,6 @@
-import { graphql, useStaticQuery } from 'gatsby';
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import { graphql, useStaticQuery } from "gatsby";
+import React from "react";
+import { Helmet } from "react-helmet";
 
 const SEO = () => {
   const { site } = useStaticQuery(query);
@@ -10,23 +10,51 @@ const SEO = () => {
     titleTemplate,
     lang,
     description,
+    keywords,
     siteUrl,
     image,
   } = siteMetadata;
   return (
-    <Helmet title={title} titleTemplate={titleTemplate}>
-      <title>{title}</title>
+    <Helmet
+      title={title}
+      titleTemplate={titleTemplate}
+      htmlAttributes={{
+        lang,
+      }}
+      meta={[
+        {
+          name: `description`,
+          content: description,
+        },
+        {
+          name: "keywords",
+          content: keywords.join(","),
+        },
+        {
+          property: `og:title`,
+          content: title,
+        },
+        {
+          property: `og:url`,
+          content: siteUrl,
+        },
+        {
+          property: `og:description`,
+          content: description,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+      ]}
+    >
       <html lang={lang} />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1"
       ></meta>
       <meta charSet="utf-8" content="text/html" />
-      <meta name="description" content={description} />
       <meta name="image" content={image} />
-      <meta property="og:url" content={siteUrl} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
     </Helmet>
   );
 };
@@ -40,6 +68,7 @@ const query = graphql`
         title
         titleTemplate
         lang
+        keywords
         description
         siteUrl
         image
