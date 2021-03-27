@@ -1,12 +1,14 @@
-import React from 'react';
-import { Element } from 'react-scroll';
-import experience from '../../content/experience.json';
-import BackgroundSvg from '../background/BackgroundSvg';
-import Routes from '../nav/Routes';
-import Jobs from './Jobs';
+import { useStaticQuery } from "gatsby";
+import React from "react";
+import { Element } from "react-scroll";
+import experience from "../../content/experience.json";
+import BackgroundSvg from "../background/BackgroundSvg";
+import Routes from "../nav/Routes";
+import Job from "./Job";
 
 export default function Experience() {
-  const { jobs, title, subtitle, paths } = experience;
+  const { title, subtitle, paths } = experience;
+  const data = useStaticQuery(query);
   return (
     <Element name={Routes.EXPERIENCE}>
       <section className="hero is-light gradient-primary-background">
@@ -19,8 +21,43 @@ export default function Experience() {
             <p className="subtitle">{subtitle}</p>
           </div>
         </div>
-        <Jobs items={jobs} />
+        {data.allMarkdownRemark.nodes.map(({ frontmatter, html }, index) => (
+          <>
+            <Job
+              key={`${frontmatter.title} - ${frontmatter.company}`}
+              description={html}
+              title={frontmatter.title}
+              company={frontmatter.company}
+              start={frontmatter.start}
+              end={frontmatter.end}
+            />
+            {index !== data.allMarkdownRemark.nodes.length - 1 ? (
+              <hr className="divider" />
+            ) : (
+              <></>
+            )}
+          </>
+        ))}
       </section>
     </Element>
   );
 }
+
+const query = graphql`
+  {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(experience)/" } }
+      sort: { fields: [frontmatter___start, frontmatter___end], order: DESC }
+    ) {
+      nodes {
+        html
+        frontmatter {
+          title
+          company
+          start(formatString: "MM.YYYY")
+          end(formatString: "MM.YYYY")
+        }
+      }
+    }
+  }
+`;

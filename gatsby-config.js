@@ -59,12 +59,18 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "experience-content",
+        path: `${__dirname}/src/content/experience`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `./src/images/`,
       },
-      __key: "images",
     },
   ],
 };
