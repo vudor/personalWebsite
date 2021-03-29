@@ -1,4 +1,4 @@
-import { useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import { Element } from "react-scroll";
 import experience from "../../content/experience.json";
