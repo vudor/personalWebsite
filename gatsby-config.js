@@ -27,7 +27,7 @@ module.exports = {
     ],
     lang: "en",
     description:
-      "Gatsby Portfolio Website for Kevin Adam - Freelance Software Developer, IT-Consultant and Lecturer",
+      "Portfolio Website for Kevin Adam - Freelance Software Developer, IT-Consultant and Lecturer",
   },
   plugins: [
     "gatsby-plugin-sass",
