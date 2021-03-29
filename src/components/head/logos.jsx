@@ -1,10 +1,10 @@
-import { StaticImage } from 'gatsby-plugin-image';
-import React from 'react';
+import { StaticImage } from "gatsby-plugin-image";
+import React from "react";
 
 const logoSize = 32;
 const styles = {
   logo: {
-    verticalAlign: 'middle',
+    verticalAlign: "middle",
     width: logoSize,
     height: logoSize,
     marginBottom: 2,
@@ -13,12 +13,11 @@ const styles = {
 
 export default [
   {
-    label: 'Node.js',
+    label: "Node.js",
     logo: (
       <StaticImage
         width={logoSize}
         height={logoSize}
-        aspectRatio={1}
         style={styles.logo}
         alt="Node.js Logo"
         src="../../images/logos/nodejs-logo.png"
@@ -26,12 +25,11 @@ export default [
     ),
   },
   {
-    label: 'Angular',
+    label: "Angular",
     logo: (
       <StaticImage
         width={logoSize}
         height={logoSize}
-        aspectRatio={1}
         style={styles.logo}
         alt="Angular Logo"
         src="../../images/logos/angular-logo.png"
@@ -39,25 +37,11 @@ export default [
     ),
   },
   {
-    label: 'Gatsby',
+    label: "React",
     logo: (
       <StaticImage
         width={logoSize}
         height={logoSize}
-        aspectRatio={1}
-        style={styles.logo}
-        alt="Gatsby Logo"
-        src="../../images/logos/gatsby-logo.png"
-      />
-    ),
-  },
-  {
-    label: 'React',
-    logo: (
-      <StaticImage
-        width={logoSize}
-        height={logoSize}
-        aspectRatio={1}
         style={styles.logo}
         alt="React Logo"
         src="../../images/logos/react-logo.png"
@@ -65,12 +49,23 @@ export default [
     ),
   },
   {
-    label: 'React-Native',
+    label: "Gatsby",
     logo: (
       <StaticImage
         width={logoSize}
         height={logoSize}
-        aspectRatio={1}
+        style={styles.logo}
+        alt="Gatsby Logo"
+        src="../../images/logos/gatsby-logo.png"
+      />
+    ),
+  },
+  {
+    label: "React-Native",
+    logo: (
+      <StaticImage
+        width={logoSize}
+        height={logoSize}
         style={styles.logo}
         alt="React-Native Logo"
         src="../../images/logos/react-logo.png"
@@ -78,12 +73,11 @@ export default [
     ),
   },
   {
-    label: 'Spring Boot',
+    label: "Spring Boot",
     logo: (
       <StaticImage
         width={logoSize}
         height={logoSize}
-        aspectRatio={1}
         style={styles.logo}
         alt="Spring Boot Logo"
         src="../../images/logos/spring-boot-logo.png"
