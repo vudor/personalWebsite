@@ -4,9 +4,8 @@ import { Helmet } from "react-helmet";
 
 const SEO = () => {
   const { site, file } = useStaticQuery(query);
-  const { src, maxWidth, maxHeight } = file.childImageSharp.fluid;
-
-  const { siteMetadata } = site;
+  const { height, width, images } = file.childImageSharp.gatsbyImageData;
+  const { src } = images.fallback;
   const {
     title,
     titleTemplate,
@@ -14,7 +13,8 @@ const SEO = () => {
     description,
     keywords,
     siteUrl,
-  } = siteMetadata;
+  } = site.siteMetadata;
+  const socialImageUrl = `${siteUrl}${src}`;
 
   return (
     <Helmet
@@ -23,66 +23,30 @@ const SEO = () => {
       htmlAttributes={{
         lang,
       }}
-      meta={[
-        {
-          name: `description`,
-          content: description,
-        },
-        {
-          name: "keywords",
-          content: keywords.join(","),
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:url`,
-          content: siteUrl,
-        },
-        {
-          property: `og:description`,
-          content: description,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-      ].concat(
-        file.childImageSharp.fluid
-          ? [
-              {
-                property: "og:image",
-                content: src,
-              },
-              {
-                property: "og:image:width",
-                content: maxWidth,
-              },
-              {
-                property: "og:image:height",
-                content: maxHeight,
-              },
-              {
-                name: "twitter:card",
-                content: "summary_large_image",
-              },
-            ]
-          : [
-              {
-                name: "twitter:card",
-                content: "summary",
-              },
-            ]
-      )}
     >
       <html lang={lang} />
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1"
-      ></meta>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="utf-8" content="text/html" />
-      {/* <meta name="image" content={image} /> */}
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords.join(",")} />
+
+      {/** OpenGraph aka Facebook Tags */}
+      <meta name="og:title" content={title} />
+      <meta name="og:site_name" content={title} />
+      <meta name="og:description" content={description} />
+      <meta name="og:url" content={siteUrl} />
+      <meta name="og:image:height" content={height} />
+      <meta name="og:image:width" content={width} />
+      <meta name="og:image" content={socialImageUrl} />
+      <meta name="og:image:secure" content={socialImageUrl} />
+      <meta name="og:type" content="website" />
+
+      {/** Twitter Tags */}
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={socialImageUrl} />
+      <meta name="twitter:image:src" content={src} />
+      <meta name="twitter:card" content="summary" />
     </Helmet>
   );
 };
@@ -104,11 +68,7 @@ const query = graphql`
 
     file(relativePath: { eq: "profile.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 500, quality: 100) {
-          ...GatsbyImageSharpFluid
-          ...GatsbyImageSharpFluidLimitPresentationSize
-        }
-        gatsbyImageData
+        gatsbyImageData(quality: 100, formats: JPG)
       }
     }
   }
