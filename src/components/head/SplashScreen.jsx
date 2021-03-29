@@ -1,7 +1,7 @@
-import { StaticImage } from 'gatsby-plugin-image';
-import React, { useEffect, useState } from 'react';
-import { Bounce, Flip } from 'react-reveal';
-import Typist from 'react-typist';
+import { StaticImage } from "gatsby-plugin-image";
+import React, { useEffect, useRef, useState } from "react";
+import { Bounce, Flip } from "react-reveal";
+import Typist from "react-typist";
 
 const imageSize = 160;
 const borderRadius = 128;
@@ -10,32 +10,34 @@ const styles = {
     flexShrink: 1,
     borderRadius: borderRadius,
     WebkitBorderRadius: borderRadius,
-    display: 'inline-block',
-    border: '8px solid rgba(33,104,105, 0.5)',
+    display: "inline-block",
+    border: "8px solid rgba(33,104,105, 0.5)",
     maxHeight: imageSize,
     minHeight: imageSize,
     maxWidth: imageSize,
     minWidth: imageSize,
   },
   text: {
-    paddingLeft: '1em',
-    display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'column',
+    paddingLeft: "1em",
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "column",
   },
 };
 
 export default function SplashScreen({ entries }) {
-  const [tech, setTech] = useState(getRandomElement(entries));
-
+  const index = useRef(0);
+  const [tech, setTech] = useState(entries[index.current++]);
   useEffect(() => {
     const interval = setInterval(() => {
-      let randomElem = getRandomElement(entries);
-      while (randomElem.label === tech.label) {
-        randomElem = getRandomElement(entries);
+      const { current } = index;
+      if (current >= entries.length - 1) {
+        index.current = 0;
+      } else {
+        index.current = current + 1;
       }
-      setTech(randomElem);
-    }, 2200);
+      setTech(entries[current]);
+    }, 2000);
     return () => clearInterval(interval);
   });
 
@@ -60,7 +62,6 @@ export default function SplashScreen({ entries }) {
     <Bounce left>
       <div className="container is-flex">
         <StaticImage
-          aspectRatio={1}
           height={imageSize}
           width={imageSize}
           style={styles.avatar}
@@ -73,15 +74,11 @@ export default function SplashScreen({ entries }) {
             Hi! I'm <span className="has-text-primary">Kevin</span>
           </p>
           <div className="subtitle is-size-4">
-            the Web-Developer ready for your next {renderTextHighlighted(tech)}{' '}
+            the Web-Developer ready for your next {renderTextHighlighted(tech)}{" "}
             Project.
           </div>
         </div>
       </div>
     </Bounce>
   );
-}
-
-function getRandomElement(list) {
-  return list[Math.floor(Math.random() * list.length)];
 }
