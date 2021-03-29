@@ -22,21 +22,15 @@ export default function Experience() {
           </div>
         </div>
         {data.allMarkdownRemark.nodes.map(({ frontmatter, html }, index) => (
-          <>
-            <Job
-              key={`${frontmatter.title} - ${frontmatter.company}`}
-              description={html}
-              title={frontmatter.title}
-              company={frontmatter.company}
-              start={frontmatter.start}
-              end={frontmatter.end}
-            />
-            {index !== data.allMarkdownRemark.nodes.length - 1 ? (
-              <hr className="divider" />
-            ) : (
-              <></>
-            )}
-          </>
+          <Job
+            key={`${frontmatter.title} - ${frontmatter.company}`}
+            description={html}
+            title={frontmatter.title}
+            company={frontmatter.company}
+            start={frontmatter.start}
+            end={frontmatter.end}
+            showDivider={index !== data.allMarkdownRemark.nodes.length - 1}
+          />
         ))}
       </section>
     </Element>
