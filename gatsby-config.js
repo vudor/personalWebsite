@@ -4,7 +4,6 @@ module.exports = {
     titleTemplate: "%s · Software Development and Consulting",
     author: "Kevin Adam",
     siteUrl: "https://www.kevelopment.dev",
-    image: "/src/images/profile.jpg",
     keywords: [
       "Kevelopment",
       "Software Developer",

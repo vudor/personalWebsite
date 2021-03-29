@@ -3,7 +3,9 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 const SEO = () => {
-  const { site } = useStaticQuery(query);
+  const { site, file } = useStaticQuery(query);
+  const { src, maxWidth, maxHeight } = file.childImageSharp.fluid;
+
   const { siteMetadata } = site;
   const {
     title,
@@ -12,8 +14,8 @@ const SEO = () => {
     description,
     keywords,
     siteUrl,
-    image,
   } = siteMetadata;
+
   return (
     <Helmet
       title={title}
@@ -46,7 +48,33 @@ const SEO = () => {
           property: `og:type`,
           content: `website`,
         },
-      ]}
+      ].concat(
+        file.childImageSharp.fluid
+          ? [
+              {
+                property: "og:image",
+                content: src,
+              },
+              {
+                property: "og:image:width",
+                content: maxWidth,
+              },
+              {
+                property: "og:image:height",
+                content: maxHeight,
+              },
+              {
+                name: "twitter:card",
+                content: "summary_large_image",
+              },
+            ]
+          : [
+              {
+                name: "twitter:card",
+                content: "summary",
+              },
+            ]
+      )}
     >
       <html lang={lang} />
       <meta
@@ -54,7 +82,7 @@ const SEO = () => {
         content="width=device-width, initial-scale=1"
       ></meta>
       <meta charSet="utf-8" content="text/html" />
-      <meta name="image" content={image} />
+      {/* <meta name="image" content={image} /> */}
     </Helmet>
   );
 };
@@ -71,7 +99,16 @@ const query = graphql`
         keywords
         description
         siteUrl
-        image
+      }
+    }
+
+    file(relativePath: { eq: "profile.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 500, quality: 100) {
+          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluidLimitPresentationSize
+        }
+        gatsbyImageData
       }
     }
   }
