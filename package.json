@@ -21,7 +21,7 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "bulma": "^0.9.2",
     "font-awesome": "^4.7.0",
-    "gatsby": "^2.23.7",
+    "gatsby": "^3.1.2",
     "gatsby-plugin-image": "^1.1.2",
     "gatsby-plugin-manifest": "^2.4.12",
     "gatsby-plugin-offline": "^3.2.11",

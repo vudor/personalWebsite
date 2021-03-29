@@ -11,7 +11,7 @@ const styles = {
   },
 };
 
-export default [
+const logos = [
   {
     label: "Node.js",
     logo: (
@@ -85,3 +85,5 @@ export default [
     ),
   },
 ];
+
+export default logos;
