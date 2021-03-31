@@ -1,9 +1,10 @@
-import { graphql, useStaticQuery } from 'gatsby';
-import React from 'react';
-import * as Scroll from 'react-scroll';
-import footerData from '../../content/footer.json';
-import SocialMediaButton from '../buttons/SocialMediaButton';
-import './footer.scss';
+import { graphql, useStaticQuery } from "gatsby";
+import React from "react";
+import * as Scroll from "react-scroll";
+import footerData from "../../content/footer.json";
+import LegalNotice from "../buttons/LegalNotice";
+import SocialMediaButton from "../buttons/SocialMediaButton";
+import "./footer.scss";
 
 const Footer = () => {
   const { site } = useStaticQuery(query);
@@ -14,7 +15,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="footer has-background-grey-darker py-6">
+    <footer className="footer has-background-grey-darker py-4">
       <div className="content has-text-centered">
         <div className="container">
           <div className="has-text-light mb-2">
@@ -41,6 +42,7 @@ const Footer = () => {
           <div>
             <hr className="footer-divider" />
           </div>
+          <LegalNotice />
           <div className="has-text-light">
             <p>
               {`© 2021 with `}
@@ -52,7 +54,7 @@ const Footer = () => {
               >
                 Gatsby
               </a>
-              {', '}
+              {", "}
               <a
                 target="_blank"
                 rel="noreferrer"
@@ -64,7 +66,7 @@ const Footer = () => {
               {` and `}
               <span className="icon has-text-info">
                 <i className="fas fa-heart"></i>
-              </span>{' '}
+              </span>{" "}
               {`by ${site.siteMetadata.author}`}
             </p>
           </div>

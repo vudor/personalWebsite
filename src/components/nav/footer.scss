@@ -1,4 +1,5 @@
 .footer-divider {
+  margin: 1rem !important;
   display: inline-block;
   border: 0;
   width: 50%;
@@ -9,7 +10,7 @@
   cursor: pointer;
 }
 
-$size: '3em';
+$size: "3em";
 .button {
   border: 0 !important;
   height: $size;

@@ -26,7 +26,6 @@ span.icon.is-x-large {
 .elevation {
   $elevation: 6px;
   $opacity: 0.5;
-  padding: 0 !important;
   -webkit-box-shadow: 0 0 $elevation 0 rgba(0, 0, 0, $opacity);
   -moz-box-shadow: 0 0 $elevation 0 rgba(0, 0, 0, $opacity);
   box-shadow: 0 0 $elevation 0 rgba(0, 0, 0, $opacity);
