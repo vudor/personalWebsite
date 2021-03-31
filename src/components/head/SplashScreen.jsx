@@ -1,5 +1,5 @@
 import { StaticImage } from "gatsby-plugin-image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Bounce, Flip } from "react-reveal";
 import Typist from "react-typist";
 
@@ -20,31 +20,40 @@ const styles = {
   text: {
     paddingLeft: "1em",
     display: "flex",
+    flexGrow: 1,
     justifyContent: "center",
     flexDirection: "column",
   },
+  noBreak: {
+    whiteSpace: "nowrap",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+  },
 };
+const INTERVAL_DURATION = 2200;
+export default function SplashScreen({ entries, breakText = false }) {
+  const [tech, setTech] = useState(entries[0]);
 
-export default function SplashScreen({ entries }) {
-  const index = useRef(0);
-  const [tech, setTech] = useState(entries[index.current++]);
   useEffect(() => {
+    const getRandomElement = () => {
+      const randIndex = Math.floor(Math.random() * entries.length);
+      return entries[randIndex];
+    };
+
     const interval = setInterval(() => {
-      const { current } = index;
-      if (current >= entries.length - 1) {
-        index.current = 0;
-      } else {
-        index.current = current + 1;
+      let next = getRandomElement();
+      while (next.label === tech.label) {
+        next = getRandomElement();
       }
-      setTech(entries[current]);
-    }, 2000);
+      setTech(next);
+    }, INTERVAL_DURATION);
     return () => clearInterval(interval);
-  });
+  }, [entries, tech]);
 
   const renderTextHighlighted = ({ label, logo }) => {
     return (
       <Flip bottom key={label}>
-        <span>
+        <span style={styles.noBreak}>
           {logo}&nbsp;
           <Typist
             startDelay={400}
@@ -60,22 +69,28 @@ export default function SplashScreen({ entries }) {
 
   return (
     <Bounce left>
-      <div className="container is-flex">
-        <StaticImage
-          height={imageSize}
-          width={imageSize}
-          style={styles.avatar}
-          imgStyle={{ borderRadius }}
-          alt="Profile Picture"
-          src="../../images/profile.jpg"
-        />
-        <div style={styles.text}>
-          <p className="title is-size-1">
-            Hi! I'm <span className="has-text-primary">Kevin</span>
-          </p>
-          <div className="subtitle is-size-4">
-            the Web-Developer ready for your next {renderTextHighlighted(tech)}{" "}
-            Project.
+      <div className="container">
+        <div className="columns">
+          <div className="column is-narrow-desktop is-narrow-tablet is-full-mobile is-flex is-justify-content-center">
+            <StaticImage
+              height={imageSize}
+              width={imageSize}
+              style={styles.avatar}
+              imgStyle={{ borderRadius }}
+              alt="Profile Picture"
+              src="../../images/profile.jpg"
+            />
+          </div>
+          <div style={styles.text} className="column is-full-mobile">
+            <p className="title is-size-1">
+              Hi! I'm <span className="has-text-primary">Kevin</span>
+            </p>
+            <p className="subtitle is-size-4">
+              {`the Web-Developer ready for your next `}
+              {breakText ? <br /> : ""}
+              {renderTextHighlighted(tech)}
+              {` Project.`}
+            </p>
           </div>
         </div>
       </div>

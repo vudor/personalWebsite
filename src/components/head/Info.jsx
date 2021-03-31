@@ -19,7 +19,7 @@ export default function Info() {
         </div>
 
         <div className="hero-body absolutely-centered">
-          <SplashScreen entries={logos} />
+          <SplashScreen entries={logos} breakText={isMobile || isTablet} />
         </div>
       </section>
     </Element>
