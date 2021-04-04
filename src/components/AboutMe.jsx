@@ -44,7 +44,7 @@ const AboutMe = () => {
                   <div
                     className="has-text-white has-text-left is-size-4"
                     dangerouslySetInnerHTML={{
-                      __html: data.markdownRemark.html,
+                      __html: data.file.childMarkdownRemark.html,
                     }}
                   ></div>
                 </div>
@@ -59,9 +59,11 @@ const AboutMe = () => {
 export default AboutMe;
 
 const query = graphql`
-  query {
-    markdownRemark {
-      html
+  {
+    file(name: { eq: "aboutme" }) {
+      childMarkdownRemark {
+        html
+      }
     }
   }
 `;
