@@ -64,9 +64,16 @@ const Footer = () => {
                 Bulma
               </a>
               {` and `}
-              <span className="icon has-text-info">
-                <i className="fas fa-heart"></i>
-              </span>{" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                className="has-text-info"
+                href="https://youtu.be/3rzgrP7VA_Q?t=14"
+              >
+                <span className="icon has-text-info">
+                  <i className="fas fa-heart"></i>
+                </span>{" "}
+              </a>
               {`by ${site.siteMetadata.author}`}
             </p>
           </div>
