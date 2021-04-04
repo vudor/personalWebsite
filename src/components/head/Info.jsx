@@ -10,19 +10,29 @@ import SplashScreen from "./SplashScreen";
 
 export default function Info() {
   const isMobile = useMediaQuery("(max-width:480px)");
-  const isTablet = useMediaQuery("(min-width:480px) and (max-width:768px)");
-  const isMedium = useMediaQuery("(min-width:768px) and (max-width:1200px)");
+  const isSmallTablet = useMediaQuery(
+    "(min-width:480px) and (max-width:600px)"
+  );
+  const isMediumLargeTablet = useMediaQuery(
+    "(min-width:600px) and (max-width:768px)"
+  );
+  const isLargeTablet = useMediaQuery(
+    "(min-width:768px) and (max-width:900px)"
+  );
+  const isMedium = useMediaQuery("(min-width:900px) and (max-width:1200px)");
+
   let paths = infoData.large;
   let width = 1920;
   if (isMobile) {
-    paths = infoData.medium;
-    width = 480;
-  } else if (isTablet) {
-    paths = infoData.medium;
-    width = 768;
+    width = 550;
+  } else if (isSmallTablet) {
+    width = 700;
+  } else if (isMediumLargeTablet) {
+    width = 800;
+  } else if (isLargeTablet) {
+    width = 1100;
   } else if (isMedium) {
-    paths = infoData.medium;
-    width = 1200;
+    width = 1400;
   }
 
   console.log({ width });
@@ -35,7 +45,7 @@ export default function Info() {
         </div>
 
         <div className="hero-body absolutely-centered">
-          <SplashScreen entries={logos} breakText={isMobile || isTablet} />
+          <SplashScreen entries={logos} breakText={isMobile || isSmallTablet} />
         </div>
       </section>
     </Element>
