@@ -35,7 +35,6 @@ export default function Info() {
     width = 1400;
   }
 
-  console.log({ width });
   return (
     <Element name={Routes.INFO}>
       <section className="hero is-fullheight is-light gradient-primary-background">
