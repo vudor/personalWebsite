@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Bounce, Flip } from "react-reveal";
 import Typist from "react-typist";
 
-const imageSize = 160;
+const imageSize = 180;
 const borderRadius = 128;
 const styles = {
   avatar: {
