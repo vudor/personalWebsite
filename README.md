@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Personal Portfolio Website using Gatsby
+  Personal Portfolio Website
 </h1>
 
 ## 🚀 Quick start
