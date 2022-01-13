@@ -19,15 +19,15 @@ const Footer = () => {
       <div className="content has-text-centered">
         <div className="container">
           <div className="has-text-light mb-2">
-            <span
-              className="icon back-to-top"
+            <button
               onClick={scrollToTop}
               onKeyDown={scrollToTop}
-              role="button"
-              tabIndex={0}
+              className="button is-outlined is-light is-rounded"
             >
-              <i className="fas fa-chevron-up"></i>
-            </span>
+              <span className="icon fas fa-1x">
+                <i className="fas fa-chevron-up"></i>
+              </span>
+            </button>
           </div>
           <div className="social-links">
             {socialMediaButtons.map(({ iconName, label, url }) => (
