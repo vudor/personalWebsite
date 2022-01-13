@@ -21,7 +21,7 @@ export default function Info() {
   );
   const isMedium = useMediaQuery("(min-width:900px) and (max-width:1200px)");
 
-  let paths = infoData.large;
+  const {paths} = infoData;
   let width = 1920;
   if (isMobile) {
     width = 550;
