@@ -70,7 +70,6 @@ export default function SplashScreen({ entries, breakText = false }) {
   return (
     <Bounce left>
       <div className="container">
-        <div className="columns">
           <div className="column is-narrow-desktop is-narrow-tablet is-full-mobile is-flex is-justify-content-center">
             <StaticImage
               height={imageSize}
@@ -81,11 +80,12 @@ export default function SplashScreen({ entries, breakText = false }) {
               src="../../images/profile.jpg"
             />
           </div>
+        <div className="columns">
           <div style={styles.text} className="column is-full-mobile">
-            <p className="title is-size-1">
+            <p className="title is-size-1 has-text-centered">
               Hi! I'm <span className="has-text-primary">Kevin</span>
             </p>
-            <p className="subtitle is-size-4">
+            <p className="subtitle is-size-4 has-text-centered">
               {`the Web-Developer ready for your next `}
               {breakText ? <br /> : ""}
               {renderTextHighlighted(tech)}
