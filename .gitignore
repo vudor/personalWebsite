@@ -5,6 +5,9 @@ public
 # VSCode files
 *.code-workspace
 
+# IntelliJ Files
+.idea
+
 # Logs
 *.log
 
