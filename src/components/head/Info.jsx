@@ -1,7 +1,7 @@
 import { useMediaQuery } from "beautiful-react-hooks";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Element } from "react-scroll";
-import infoData from "../../content/info.json";
+import { paths } from "../../content/info.json";
 import BackgroundSvg from "../background/BackgroundSvg";
 import Navbar from "../nav/Navbar";
 import Routes from "../nav/Routes";
@@ -21,19 +21,22 @@ export default function Info() {
   );
   const isMedium = useMediaQuery("(min-width:900px) and (max-width:1200px)");
 
-  const {paths} = infoData;
-  let width = 1920;
-  if (isMobile) {
-    width = 550;
-  } else if (isSmallTablet) {
-    width = 700;
-  } else if (isMediumLargeTablet) {
-    width = 800;
-  } else if (isLargeTablet) {
-    width = 1100;
-  } else if (isMedium) {
-    width = 1400;
-  }
+  const [width, setWidth] = useState(1920);
+  useEffect(() => {
+    if (isMobile) {
+      setWidth(550);
+    } else if (isSmallTablet) {
+      setWidth(700);
+    } else if (isMediumLargeTablet) {
+      setWidth(800);
+    } else if (isLargeTablet) {
+      setWidth(1100);
+    } else if (isMedium) {
+      setWidth(1400);
+    } else {
+      setWidth(1920)
+    }
+  }, [isMobile, isSmallTablet, isMediumLargeTablet, isLargeTablet, isMedium])
 
   return (
     <Element name={Routes.INFO}>
