@@ -8,7 +8,7 @@ export default function Contact() {
   const { title, subtitle, buttonText, paths } = contact;
   return (
     <Element name={Routes.CONTACT}>
-      <section className="hero is-light is-medium gradient-primary-background-reverse">
+      <section className="hero is-light is-fullheight gradient-primary-background-reverse">
         <BackgroundSvg height="200" elements={paths} />
         <div className="hero-body">
           <div className="container has-text-centered pb-6">
