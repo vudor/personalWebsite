@@ -1,6 +1,6 @@
 import React from "react";
 import { Element } from "react-scroll";
-import { paths } from "../../content/info.json";
+import { bottom, top } from "../../content/info.json";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import BackgroundSvg from "../background/BackgroundSvg";
 import Navbar from "../nav/Navbar";
@@ -13,8 +13,11 @@ export default function Info() {
 
   return (
     <Element name={Routes.INFO}>
-      <section className="hero is-fullheight is-light gradient-primary-background">
-        <BackgroundSvg elements={paths} width={width} />
+      <section className="hero is-fullheight is-light gradient-light-background">
+        <section className="hero it-light gradient-primary-background" >
+          <BackgroundSvg elements={top} height='200' />
+        </section>
+
         <div className="hero-head">
           <Navbar />
         </div>
@@ -22,6 +25,10 @@ export default function Info() {
         <div className="hero-body absolutely-centered">
           <SplashScreen entries={logos} breakText={width < 700} />
         </div>
+
+        <section className="hero is-light gradient-primary-background">
+          <BackgroundSvg elements={bottom} height='200' />
+        </section>
       </section>
     </Element>
   );
