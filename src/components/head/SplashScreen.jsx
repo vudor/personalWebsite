@@ -3,6 +3,9 @@ import React, { useEffect, useState } from "react";
 import { Bounce, Flip } from "react-reveal";
 import Typist from "react-typist";
 
+const NBSP = '\xa0';
+const INTERVAL_DURATION = 2200;
+
 const imageSize = 180;
 const borderRadius = 128;
 const styles = {
@@ -30,7 +33,6 @@ const styles = {
     textOverflow: "ellipsis",
   },
 };
-const INTERVAL_DURATION = 2200;
 export default function SplashScreen({ entries, breakText = false }) {
   const [tech, setTech] = useState(entries[0]);
 
@@ -70,23 +72,23 @@ export default function SplashScreen({ entries, breakText = false }) {
   return (
     <Bounce left>
       <div className="container">
-          <div className="column is-narrow-desktop is-narrow-tablet is-full-mobile is-flex is-justify-content-center">
-            <StaticImage
-              height={imageSize}
-              width={imageSize}
-              style={styles.avatar}
-              imgStyle={{ borderRadius }}
-              alt="Profile Picture"
-              src="../../images/profile.jpg"
-            />
-          </div>
+        <div className="column is-narrow-desktop is-narrow-tablet is-full-mobile is-flex is-justify-content-center">
+          <StaticImage
+            height={imageSize}
+            width={imageSize}
+            style={styles.avatar}
+            imgStyle={{ borderRadius }}
+            alt="Profile Picture"
+            src="../../images/profile.jpg"
+          />
+        </div>
         <div className="columns">
           <div style={styles.text} className="column is-full-mobile">
             <p className="title is-size-1 has-text-centered">
               Hi! I'm <span className="has-text-primary">Kevin</span>
             </p>
             <p className="subtitle is-size-4 has-text-centered">
-              {`the Web-Developer ready for your next `}
+              {`the Web-Developer ready for${NBSP}your${NBSP}next${NBSP}`}
               {breakText ? <br /> : ""}
               {renderTextHighlighted(tech)}
               {` Project.`}

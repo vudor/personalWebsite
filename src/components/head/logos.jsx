@@ -73,6 +73,18 @@ const logos = [
     ),
   },
   {
+    label: "NestJS",
+    logo: (
+      <StaticImage
+        width={logoSize}
+        height={logoSize}
+        style={styles.logo}
+        alt="NestJS Logo"
+        src="../../images/logos/nestjs-logo.png"
+      />
+    ),
+  },
+  {
     label: "Spring Boot",
     logo: (
       <StaticImage
