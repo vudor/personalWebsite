@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const globalWindow = typeof window !== "undefined" ? window : {};
+const globalWindow = window ?? {};
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = globalWindow;
