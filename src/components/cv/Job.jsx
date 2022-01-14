@@ -1,5 +1,5 @@
-import { useMediaQuery } from "beautiful-react-hooks";
 import React from "react";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 import "./job.scss";
 
 export default function Job({
@@ -10,17 +10,14 @@ export default function Job({
   end,
   showDivider = false,
 }) {
-  // TODO: create context for media query breakpoints
-  const isMobile = useMediaQuery("(max-width:480px)");
-  const isTablet = useMediaQuery("(min-width:480px) and (max-width:768px)");
-  const isMedium = useMediaQuery("(min-width:768px) and (max-width:1200px)");
+  const { width } = useWindowDimensions();
 
   let spacing = "mx-6 my-2 p-6";
-  if (isMedium) {
+  if (width > 768) {
     spacing = "mx-2 my-2 p-6";
-  } else if (isTablet) {
+  } else if (width > 480 && width <= 768) {
     spacing = "mx-2";
-  } else if (isMobile) {
+  } else if (width <= 480) {
     spacing = "";
   }
 
