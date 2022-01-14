@@ -8,7 +8,7 @@
   </a>
   &nbsp;
   <a href="https://reactjs.org/">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo" height="60">
+    <img alt="React Logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"  height="60">
   </a>
 </p>
 <h1 align="center">
