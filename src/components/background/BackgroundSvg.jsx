@@ -7,7 +7,7 @@ export default function BackgroundSvg({
   primary = false,
 }) {
   return (
-    <svg viewBox={'0 0 ' + width + ' ' + height}>
+    <svg viewBox={`0 0 ${width} ${height}`}>
       {elements.map(({ path, opacity }) => (
         <path
           key={`${JSON.stringify(path)} - ${opacity}`}
