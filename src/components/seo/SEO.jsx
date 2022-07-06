@@ -13,7 +13,6 @@ const SEO = () => {
     siteUrl,
     image
   } = site.siteMetadata;
-  console.log(image);
 
   return (
     <Helmet title={title} titleTemplate={titleTemplate} htmlAttributes={{ lang }}>
