@@ -1,9 +1,9 @@
-import { graphql, useStaticQuery } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { Fade } from "react-reveal";
 import { Element } from "react-scroll";
 import Routes from "./nav/Routes";
+import useAboutMeData from "../hooks/useAboutMeData";
 
 const roundBorders = {
   borderRadius: 6,
@@ -11,8 +11,8 @@ const roundBorders = {
 };
 const maxHeight = 550;
 
-const AboutMe = () => {
-  const data = useStaticQuery(query);
+function AboutMe() {
+  const { html } = useAboutMeData();
   return (
     <Element name={Routes.ABOUTME}>
       <section className="hero is-light is-fullheight gradient-primary-background py-6">
@@ -22,7 +22,7 @@ const AboutMe = () => {
               <Fade left>
                 <div className="column is-flex is-align-items-center" style={roundBorders}>
                   <StaticImage
-                    style={({ maxHeight: maxHeight }, roundBorders)}
+                    style={({ maxHeight }, roundBorders)}
                     className="elevation"
                     imgStyle={
                       ({
@@ -30,20 +30,20 @@ const AboutMe = () => {
                       },
                       roundBorders)
                     }
-                    src={`../images/kevin.jpeg`}
+                    src="../images/kevin.jpeg"
                     alt="Me"
                   />
                 </div>
               </Fade>
-              <div className="column is-1"></div>
+              <div className="column is-1" />
               <Fade right>
                 <div className="column is-flex is-align-items-center">
                   <div
                     className="has-text-white has-text-left is-size-4"
                     dangerouslySetInnerHTML={{
-                      __html: data.file.childMarkdownRemark.html,
+                      __html: html,
                     }}
-                  ></div>
+                  />
                 </div>
               </Fade>
             </div>
@@ -52,15 +52,5 @@ const AboutMe = () => {
       </section>
     </Element>
   );
-};
+}
 export default AboutMe;
-
-const query = graphql`
-  {
-    file(name: { eq: "aboutme" }) {
-      childMarkdownRemark {
-        html
-      }
-    }
-  }
-`;

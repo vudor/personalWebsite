@@ -3,8 +3,11 @@ import { Link } from "gatsby";
 
 // styles
 const pageStyles = {
-  color: "#232129",
-  padding: "96px",
+  width: "30%",
+  height: "100%",
+  // color: "#232129",
+  margin: "auto",
+  padding: "4em",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 };
 const headingStyles = {
@@ -25,7 +28,7 @@ const codeStyles = {
 };
 
 // markup
-const NotFoundPage = () => {
+function NotFoundPage() {
   return (
     <main style={pageStyles}>
       <title>Not found</title>
@@ -34,8 +37,8 @@ const NotFoundPage = () => {
         Sorry{" "}
         <span role="img" aria-label="Pensive emoji">
           😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
+        </span>
+        &nbsp; we couldn’t find what you were looking for.
         <br />
         {process.env.NODE_ENV === "development" ? (
           <>
@@ -45,10 +48,10 @@ const NotFoundPage = () => {
           </>
         ) : null}
         <br />
-        <Link to="/">Go home</Link>.
+        <Link to="/">Go ham or Go home</Link>.
       </p>
     </main>
   );
-};
+}
 
 export default NotFoundPage;

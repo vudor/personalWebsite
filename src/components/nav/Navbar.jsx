@@ -16,7 +16,11 @@ export default function Navbar() {
   const [hide, setHide] = useState(true);
 
   const hideBar = () => {
-    window.scrollY >= window.innerHeight ? setHide(false) : setHide(true);
+    if (window.scrollY >= window.innerHeight) {
+      setHide(false);
+    } else {
+      setHide(true);
+    }
   };
 
   useEffect(() => {
@@ -36,8 +40,8 @@ export default function Navbar() {
                   className="navbar-item"
                   activeClass="is-active"
                   to={route}
-                  spy={true}
-                  smooth={true}
+                  spy
+                  smooth
                   duration={300}
                 >
                   {label}

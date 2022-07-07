@@ -4,7 +4,7 @@
   "private": true,
   "description": "Kevelopment",
   "author": "Kevin Adam",
-  "license": "SEE LICENSE FILE",
+  "license": "SEE ./LICENSE",
   "keywords": [
     "gatsby"
   ],
@@ -14,7 +14,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "lint": "prettier --check . && eslint ."
+    "lint": "prettier --check . && eslint src"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",

@@ -1,14 +1,14 @@
-import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import { Element } from "react-scroll";
 import experience from "../../content/experience.json";
 import BackgroundSvg from "../background/BackgroundSvg";
 import Routes from "../nav/Routes";
 import Job from "./Job";
+import useExperienceData from "../../hooks/useExperienceData";
 
 export default function Experience() {
   const { title, subtitle, paths } = experience;
-  const data = useStaticQuery(query);
+  const { nodes } = useExperienceData();
   return (
     <Element name={Routes.EXPERIENCE}>
       <section className="hero is-light gradient-primary-background">
@@ -21,7 +21,7 @@ export default function Experience() {
             <p className="subtitle">{subtitle}</p>
           </div>
         </div>
-        {data.allMarkdownRemark.nodes.map(({ frontmatter, html }, index) => (
+        {nodes.map(({ frontmatter, html }, index) => (
           <Job
             key={`${frontmatter.title} - ${frontmatter.company}`}
             description={html}
@@ -29,29 +29,10 @@ export default function Experience() {
             company={frontmatter.company}
             start={frontmatter.start}
             end={frontmatter.end}
-            showDivider={index !== data.allMarkdownRemark.nodes.length - 1}
+            showDivider={index !== nodes.length - 1}
           />
         ))}
       </section>
     </Element>
   );
 }
-
-const query = graphql`
-  {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(experience)/" } }
-      sort: { fields: [frontmatter___start, frontmatter___end], order: DESC }
-    ) {
-      nodes {
-        html
-        frontmatter {
-          title
-          company
-          start(formatString: "MM.YYYY")
-          end(formatString: "MM.YYYY")
-        }
-      }
-    }
-  }
-`;

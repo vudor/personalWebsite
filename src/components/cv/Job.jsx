@@ -2,6 +2,7 @@ import React from "react";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import "./job.scss";
 
+// eslint-disable-next-line react/prop-types
 export default function Job({ description, title, company, start, end, showDivider = false }) {
   const { width } = useWindowDimensions();
 
@@ -35,9 +36,9 @@ export default function Job({ description, title, company, start, end, showDivid
           dangerouslySetInnerHTML={{
             __html: description,
           }}
-        ></div>
+        />
       </section>
-      {showDivider ? <hr className="divider" /> : <></>}
+      {showDivider ? <hr className="divider" /> : null}
     </>
   );
 }

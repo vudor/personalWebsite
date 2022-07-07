@@ -11,7 +11,7 @@ const borderRadius = 128;
 const styles = {
   avatar: {
     flexShrink: 1,
-    borderRadius: borderRadius,
+    borderRadius,
     WebkitBorderRadius: borderRadius,
     display: "inline-block",
     border: "8px solid rgba(33,104,105, 0.5)",
@@ -33,6 +33,8 @@ const styles = {
     textOverflow: "ellipsis",
   },
 };
+
+// eslint-disable-next-line react/prop-types
 export default function SplashScreen({ entries, breakText = false }) {
   const [tech, setTech] = useState(entries[0]);
 
@@ -52,22 +54,20 @@ export default function SplashScreen({ entries, breakText = false }) {
     return () => clearInterval(interval);
   }, [entries, tech]);
 
-  const renderTextHighlighted = ({ label, logo }) => {
-    return (
-      <Flip bottom key={label}>
-        <span style={styles.noBreak}>
-          {logo}&nbsp;
-          <Typist
-            startDelay={400}
-            className="has-text-primary inline-block"
-            cursor={{ hideWhenDone: true, hideWhenDoneDelay: 0 }}
-          >
-            {label}
-          </Typist>
-        </span>
-      </Flip>
-    );
-  };
+  const renderTextHighlighted = ({ label, logo }) => (
+    <Flip bottom key={label}>
+      <span style={styles.noBreak}>
+        {logo}&nbsp;
+        <Typist
+          startDelay={400}
+          className="has-text-primary inline-block"
+          cursor={{ hideWhenDone: true, hideWhenDoneDelay: 0 }}
+        >
+          {label}
+        </Typist>
+      </span>
+    </Flip>
+  );
 
   return (
     <Bounce left>
@@ -85,13 +85,13 @@ export default function SplashScreen({ entries, breakText = false }) {
         <div className="columns">
           <div style={styles.text} className="column is-full-mobile">
             <p className="title is-size-1 has-text-centered">
-              Hi! I'm <span className="has-text-primary">Kevin</span>
+              Hi! I&apos;m <span className="has-text-primary">Kevin</span>
             </p>
             <p className="subtitle is-size-4 has-text-centered">
               {`the Web-Developer ready for${NBSP}your${NBSP}next${NBSP}`}
               {breakText ? <br /> : ""}
               {renderTextHighlighted(tech)}
-              {` Project.`}
+              {" Project."}
             </p>
           </div>
         </div>

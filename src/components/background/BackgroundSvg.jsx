@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function BackgroundSvg({ elements, height = 1080, width = 1920, primary = false }) {
+// eslint-disable-next-line react/prop-types
+export default function BackgroundSvg({ elements = [], height = 1080, width = 1920, primary = false }) {
   return (
     <svg viewBox={`0 0 ${width} ${height}`}>
       {elements.map(({ path, opacity }) => (
@@ -11,7 +12,7 @@ export default function BackgroundSvg({ elements, height = 1080, width = 1920, p
             opacity,
           }}
           d={path}
-        ></path>
+        />
       ))}
     </svg>
   );

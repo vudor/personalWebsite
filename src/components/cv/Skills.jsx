@@ -21,7 +21,7 @@ export default function Skills() {
                     <ul key={`iconList-${value}`}>
                       {value.map((entry) => (
                         <span className="icon is-x-large has-text-primary" key={JSON.stringify(entry)}>
-                          <i className={entry + " fa-4x"}></i>
+                          <i className={`${entry} fa-4x`} />
                         </span>
                       ))}
                     </ul>
@@ -40,7 +40,7 @@ export default function Skills() {
                       <span>{entry}</span>
                       &nbsp;
                       <span className="icon has-text-primary">
-                        <i className="fas fa-check"></i>
+                        <i className="fas fa-check" />
                       </span>
                     </li>
                   ))}

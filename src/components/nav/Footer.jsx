@@ -1,15 +1,14 @@
-import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import * as Scroll from "react-scroll";
 import footerData from "../../content/footer.json";
 import LegalNotice from "../buttons/LegalNotice";
 import SocialMediaButton from "../buttons/SocialMediaButton";
 import "./footer.scss";
+import useFooterData from "../../hooks/useFooterData";
 
-const Footer = () => {
-  const { site } = useStaticQuery(query);
+function Footer() {
   const { socialMediaButtons } = footerData;
-
+  const { author } = useFooterData();
   const scrollToTop = () => {
     Scroll.animateScroll.scrollToTop();
   };
@@ -19,9 +18,14 @@ const Footer = () => {
       <div className="content has-text-centered">
         <div className="container">
           <div className="has-text-light mb-2">
-            <button onClick={scrollToTop} onKeyDown={scrollToTop} className="button is-outlined is-light is-rounded">
+            <button
+              type="button"
+              onClick={scrollToTop}
+              onKeyDown={scrollToTop}
+              className="button is-outlined is-light is-rounded"
+            >
               <span className="icon fas fa-1x">
-                <i className="fas fa-chevron-up"></i>
+                <i className="fas fa-chevron-up" />
               </span>
             </button>
           </div>
@@ -36,7 +40,7 @@ const Footer = () => {
           <LegalNotice />
           <div className="has-text-light">
             <p>
-              {`© 2021 with `}
+              {"© 2021 with "}
               <a target="_blank" rel="noreferrer" className="has-text-info" href="https://www.gatsbyjs.com">
                 Gatsby
               </a>
@@ -44,29 +48,19 @@ const Footer = () => {
               <a target="_blank" rel="noreferrer" className="has-text-info" href="https://www.bulma.io">
                 Bulma
               </a>
-              {` and `}
+              {" and "}
               <a target="_blank" rel="noreferrer" className="has-text-info" href="https://youtu.be/3rzgrP7VA_Q?t=14">
                 <span className="icon has-text-info">
-                  <i className="fas fa-heart"></i>
+                  <i className="fas fa-heart" />
                 </span>{" "}
               </a>
-              {`by ${site.siteMetadata.author}`}
+              {`by ${author}`}
             </p>
           </div>
         </div>
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;
-
-const query = graphql`
-  query Footer {
-    site {
-      siteMetadata {
-        author
-      }
-    }
-  }
-`;

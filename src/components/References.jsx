@@ -14,7 +14,7 @@ export default function References() {
             <p className="title">{title}</p>
             <p className="subtitle loading-dots">{subtitle}</p>
             <span className="icon is-x-large has-text-primary">
-              <i className="fas fa-hard-hat fa-4x"></i>
+              <i className="fas fa-hard-hat fa-4x" />
             </span>
           </div>
         </div>

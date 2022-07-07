@@ -9,7 +9,7 @@ import References from "../components/References";
 import Seo from "../components/seo/SEO";
 import "../scss/styles.scss";
 
-const IndexPage = () => {
+function IndexPage() {
   return (
     <>
       <Seo />
@@ -22,6 +22,6 @@ const IndexPage = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default IndexPage;

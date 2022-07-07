@@ -1,26 +1,9 @@
-import { graphql, useStaticQuery } from "gatsby";
 import { Helmet } from "react-helmet";
 import React from "react";
-
-const GET_SEO_DATA = graphql`
-  query SEO {
-    site {
-      siteMetadata {
-        title
-        titleTemplate
-        lang
-        keywords
-        description
-        siteUrl
-        image
-      }
-    }
-  }
-`;
+import useSeoData from "../../hooks/useSeoData";
 
 function SEO() {
-  const { site } = useStaticQuery(GET_SEO_DATA);
-  const { title, titleTemplate, lang, description, keywords, siteUrl, image } = site.siteMetadata;
+  const { title, titleTemplate, lang, description, keywords, siteUrl, image } = useSeoData();
 
   return (
     <Helmet title={title} titleTemplate={titleTemplate} htmlAttributes={{ lang }}>
