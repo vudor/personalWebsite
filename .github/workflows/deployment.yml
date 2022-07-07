@@ -21,7 +21,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.ACCESS_TOKEN }}
         with:
           source-directory: "public"
-          destination-github-username: "vudor"
-          destination-repository-name: "vudor.github.io"
-          user-email: kevinadam@gmx.de
+          destination-github-username: "kevelopment"
+          destination-repository-name: "kevelopment.github.io"
+          user-email: info@kevelopment.dev
           target-branch: "main"
