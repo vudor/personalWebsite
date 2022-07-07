@@ -49,6 +49,18 @@ const logos = [
     ),
   },
   {
+    label: "Next.js",
+    logo: (
+      <StaticImage
+        width={logoSize}
+        height={logoSize}
+        style={styles.logo}
+        alt="Next.js Logo"
+        src="../../images/logos/nextjs-logo.png"
+      />
+    ),
+  },
+  {
     label: "Gatsby",
     logo: (
       <StaticImage
