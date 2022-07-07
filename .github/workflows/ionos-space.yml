@@ -18,11 +18,11 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: "recursive"
-      - name: Setup Node.js 12.20.x
+      - name: Setup Node.js 12.22.x
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
         uses: actions/setup-node@v1
         with:
-          node-version: 12.20.x
+          node-version: 12.22.x
       - name: Prepare Project build environment
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
         run: |
