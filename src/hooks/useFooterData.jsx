@@ -9,6 +9,7 @@ const GET_FOOTER_DATA = graphql`
     }
   }
 `;
+
 const useFooterData = () => {
   const { site } = useStaticQuery(GET_FOOTER_DATA);
   return site.siteMetadata;
