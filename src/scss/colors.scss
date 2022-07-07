@@ -8,11 +8,7 @@ $light: lighten(#dce1de, 10%);
 $dark: #38423c;
 
 $background-gradient: linear-gradient(to right, $primary, $primary-light);
-$background-gradient-reverse: linear-gradient(
-  to left,
-  $primary,
-  $primary-light
-);
+$background-gradient-reverse: linear-gradient(to left, $primary, $primary-light);
 
 html,
 body {

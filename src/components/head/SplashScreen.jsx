@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Bounce, Flip } from "react-reveal";
 import Typist from "react-typist";
 
-const NBSP = '\xa0';
+const NBSP = "\xa0";
 const INTERVAL_DURATION = 2200;
 
 const imageSize = 180;

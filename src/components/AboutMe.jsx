@@ -20,10 +20,7 @@ const AboutMe = () => {
           <div className="container">
             <div className="columns">
               <Fade left>
-                <div
-                  className="column is-flex is-align-items-center"
-                  style={roundBorders}
-                >
+                <div className="column is-flex is-align-items-center" style={roundBorders}>
                   <StaticImage
                     style={({ maxHeight: maxHeight }, roundBorders)}
                     className="elevation"

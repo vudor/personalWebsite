@@ -2,14 +2,7 @@ import React from "react";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import "./job.scss";
 
-export default function Job({
-  description,
-  title,
-  company,
-  start,
-  end,
-  showDivider = false,
-}) {
+export default function Job({ description, title, company, start, end, showDivider = false }) {
   const { width } = useWindowDimensions();
 
   let spacing = "mx-6 my-2 p-6";
@@ -24,10 +17,7 @@ export default function Job({
   return (
     <>
       <section className={`section ${spacing}`}>
-        <h1
-          className="title has-text-primary"
-          style={{ textTransform: "uppercase" }}
-        >
+        <h1 className="title has-text-primary" style={{ textTransform: "uppercase" }}>
           {title}
         </h1>
         <h2 className="subtitle ">

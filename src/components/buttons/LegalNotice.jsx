@@ -14,10 +14,7 @@ const LegalNotice = () => {
 
   return (
     <>
-      <button
-        className="button is-outlined is-light is-rounded"
-        onClick={openModal}
-      >
+      <button className="button is-outlined is-light is-rounded" onClick={openModal}>
         Legal Notice
       </button>
       {isOpen ? (

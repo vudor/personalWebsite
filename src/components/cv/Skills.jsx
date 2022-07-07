@@ -1,8 +1,8 @@
-import React from 'react';
-import { Fade } from 'react-reveal';
-import { Element } from 'react-scroll';
-import skills from '../../content/skills.json';
-import Routes from '../nav/Routes';
+import React from "react";
+import { Fade } from "react-reveal";
+import { Element } from "react-scroll";
+import skills from "../../content/skills.json";
+import Routes from "../nav/Routes";
 
 export default function Skills() {
   const { techStack, qualities } = skills;
@@ -20,11 +20,8 @@ export default function Skills() {
                   return (
                     <ul key={`iconList-${value}`}>
                       {value.map((entry) => (
-                        <span
-                          className="icon is-x-large has-text-primary"
-                          key={JSON.stringify(entry)}
-                        >
-                          <i className={entry + ' fa-4x'}></i>
+                        <span className="icon is-x-large has-text-primary" key={JSON.stringify(entry)}>
+                          <i className={entry + " fa-4x"}></i>
                         </span>
                       ))}
                     </ul>

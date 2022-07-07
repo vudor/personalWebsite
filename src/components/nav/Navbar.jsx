@@ -25,16 +25,10 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav
-      className="navbar is-fixed-top is-primary mt-2"
-      style={{ top: hide ? "-4em" : 0, transition: "top ease 1s" }}
-    >
+    <nav className="navbar is-fixed-top is-primary mt-2" style={{ top: hide ? "-4em" : 0, transition: "top ease 1s" }}>
       <div className="container">
         <div id="navbarMenu" className="navbar-menu">
-          <div
-            className="navbar-start"
-            style={{ flex: 1, justifyContent: "center" }}
-          >
+          <div className="navbar-start" style={{ flex: 1, justifyContent: "center" }}>
             <span className="is-flex blurred-container">
               {links.map(({ label, route }) => (
                 <Link

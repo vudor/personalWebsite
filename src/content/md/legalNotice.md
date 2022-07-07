@@ -1,6 +1,7 @@
 # Impressum
 
 ### Informationspflicht laut § 5 TMG.
+
 \
 Kevelopment - Software-Development and -Consulting\
 Müggenweg 15\
@@ -45,15 +46,15 @@ Die Bilder, Fotos und Grafiken auf dieser Webseite sind urheberrechtlich geschü
 
 Die Bilderrechte liegen bei den folgenden Personen:
 
-* Kevin Adam
+- Kevin Adam
 
 # Datenschutzerklärung
 
 ## Inhaltsverzeichnis
 
-* Datenschutz
-* TLS-Verschlüsselung mit https
-* Font Awesome Datenschutzerklärung
+- Datenschutz
+- TLS-Verschlüsselung mit https
+- Font Awesome Datenschutzerklärung
 
 ## Datenschutz
 
@@ -76,29 +77,35 @@ Wenn Sie mehr zum Thema Verschlüsselung wissen möchten, empfehlen wir die Goog
 Wir verwenden auf unserer Website Font Awesome des amerikanischen Unternehmens Fonticons (307 S. Main St., Suite 202, Bentonville, AR 72712, USA). Wenn Sie eine unserer Webseiten aufrufen, wird die Web-Schriftart Font Awesome (im Speziellen Icons) über das Font Awesome Content Delivery Netzwerk (CDN) geladen. So werden die Texte bzw. Schriften und Icons auf jedem Endgerät passend angezeigt. In dieser Datenschutzerklärung gehen wir näher auf die Datenspeicherung und Datenverarbeitung durch diesen Service ein.
 
 ### Was ist Font Awesome?
+
 Icons spielen für Websites eine immer wichtigere Rolle. Font Awesome ist eine Web-Schriftart, die speziell für Webdesigner und Webentwickler entwickelt wurde. Mit Font Awesome können etwa Icons mit Hilfe der Stylesheet-Sprache CSS nach Belieben skaliert und gefärbt werden. Sie ersetzen so alte Bild-Icons. Font Awesome CDN ist der einfachste Weg die Icons oder Schriftarten auf Ihre Website zu laden. Dafür mussten wir nur eine kleine Code-Zeile in unsere Website einbinden.
 
 ### Warum verwenden wir Font Awesome auf unserer Website?
-Durch Font Awesome können Inhalte auf unserer Website besser aufbereitet werden. So können Sie sich auf unserer Website besser orientieren und die Inhalte leichter erfassen. Mit den Icons kann man sogar manchmal ganze Wörter ersetzen und Platz sparen. Da ist besonders praktisch, wenn wir Inhalte speziell für Smartphones optimieren.  Diese Icons werden statt als Bild als HMTL-Code eingefügt. Dadurch können wir die Icons mit CSS genauso bearbeiten, wie wir wollen. Gleichzeitig verbessern wir mit Font Awesome auch unsere Ladegeschwindigkeit, weil es sich nur um HTML-Elemente handelt und nicht um Icon-Bilder. All diese Vorteile helfen uns, die Website für Sie noch übersichtlicher, frischer und schneller zu machen.
+
+Durch Font Awesome können Inhalte auf unserer Website besser aufbereitet werden. So können Sie sich auf unserer Website besser orientieren und die Inhalte leichter erfassen. Mit den Icons kann man sogar manchmal ganze Wörter ersetzen und Platz sparen. Da ist besonders praktisch, wenn wir Inhalte speziell für Smartphones optimieren. Diese Icons werden statt als Bild als HMTL-Code eingefügt. Dadurch können wir die Icons mit CSS genauso bearbeiten, wie wir wollen. Gleichzeitig verbessern wir mit Font Awesome auch unsere Ladegeschwindigkeit, weil es sich nur um HTML-Elemente handelt und nicht um Icon-Bilder. All diese Vorteile helfen uns, die Website für Sie noch übersichtlicher, frischer und schneller zu machen.
 
 ### Welche Daten werden von Font Awesome gespeichert?
+
 Zum Laden von Icons und Symbolen wird das Font Awesome Content Delivery Network (CDN) verwendet. CDNs sind Netzwerke von Servern, die weltweit verteilt sind und es möglich machen, schnell Dateien aus der Nähe zu laden. So werden auch, sobald Sie eine unserer Seiten aufrufen, die entsprechenden Icons von Font Awesome bereitgestellt.
 
 Damit die Web-Schriftarten geladen werden können, muss Ihr Browser eine Verbindung zu den Servern des Unternehmens Fonticons, Inc. herstellen. Dabei wird Ihre IP-Adresse erkannt. Font Awesome sammelt auch Daten darüber, welche Icon-Dateien wann heruntergeladen werden. Weiters werden auch technische Daten wie etwa Ihre Browser-Version, Bildschirmauflösung oder der Zeitpunkt der ausgerufenen Seite übertragen.
 
 Aus folgenden Gründen werden diese Daten gesammelt und gespeichert:
-* um Content Delivery Netzwerke zu optimieren
-* um technische Fehler zu erkennen und zu beheben
-* um CDNs vor Missbrauch und Angriffen zu schützen
-* um Gebühren von Font Awesome Pro-Kunden berechnen zu können
-* um die Beliebtheit von Icons zu erfahren
-* um zu wissen, welchen Computer und welche Software Sie verwenden
-Falls Ihr Browser Web-Schriftarten nicht zulässt, wird automatisch eine Standardschrift Ihres PCs verwendet. Nach derzeitigem Stand unserer Erkenntnis werden keine Cookies gesetzt. Wir sind mit der Datenschutzabteilung von Font Awesome in Kontakt und geben Ihnen Bescheid, sobald wir näheres in Erfahrung bringen.
+
+- um Content Delivery Netzwerke zu optimieren
+- um technische Fehler zu erkennen und zu beheben
+- um CDNs vor Missbrauch und Angriffen zu schützen
+- um Gebühren von Font Awesome Pro-Kunden berechnen zu können
+- um die Beliebtheit von Icons zu erfahren
+- um zu wissen, welchen Computer und welche Software Sie verwenden
+  Falls Ihr Browser Web-Schriftarten nicht zulässt, wird automatisch eine Standardschrift Ihres PCs verwendet. Nach derzeitigem Stand unserer Erkenntnis werden keine Cookies gesetzt. Wir sind mit der Datenschutzabteilung von Font Awesome in Kontakt und geben Ihnen Bescheid, sobald wir näheres in Erfahrung bringen.
 
 ### Wie lange und wo werden die Daten gespeichert?
+
 Font Awesome speichert Daten über die Nutzung des Content Delivery Network auf Servern auch in den Vereinigten Staaten von Amerika. Die CDN-Server befinden sich allerdings weltweit und speichern Userdaten, wo Sie sich befinden. In identifizierbarer Form werden die Daten in der Regel nur wenige Wochen gespeichert. Aggregierte Statistiken über die Nutzung von den CDNs können auch länger gespeichert werden. Personenbezogene Daten sind hier nicht enthalten.
 
 ### Wie kann ich meine Daten löschen bzw. die Datenspeicherung verhindern?
+
 Font Awesome speichert nach aktuellem Stand unseres Wissens keine personenbezogenen Daten über die Content Delivery Netzwerke. Wenn Sie nicht wollen, dass Daten über die verwendeten Icons gespeichert werden, können Sie leider unsere Website nicht besuchen. Wenn Ihr Browser keine Web-Schriftarten erlaubt, werden auch keine Daten übertragen oder gespeichert. In diesem Fall wird einfach die Standard-Schrift Ihres Computers verwendet.
 
 Wenn Sie mehr über Font Awesome und deren Umgang mit Daten erfahren wollen, empfehlen wir Ihnen die Datenschutzerklärung unter https://fontawesome.com/privacy und die Hilfeseite unter https://fontawesome.com/help.

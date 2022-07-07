@@ -21,8 +21,7 @@ module.exports = {
       "freelance software developer",
     ],
     lang: "en",
-    description:
-      "Personal website of Kevin Adam - the Freelance Web Developer for your next project",
+    description: "Personal website of Kevin Adam - the Freelance Web Developer for your next project",
   },
   plugins: [
     "gatsby-plugin-sass",
