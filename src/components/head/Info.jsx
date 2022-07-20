@@ -15,7 +15,7 @@ export default function Info() {
   return (
     <Element name={Routes.INFO}>
       <section className="hero is-fullheight is-light gradient-light-background">
-        <section className="hero it-light gradient-primary-background">
+        <section className="hero gradient-primary-background">
           <BackgroundSvg elements={top} height="200" />
         </section>
 

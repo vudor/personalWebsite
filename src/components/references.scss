@@ -4,6 +4,32 @@
   animation: dots 2s steps(5, end) infinite;
 }
 
+// make it zoom zoom
+.project-box:hover {
+  transition: transform 0.15s ease-in-out;
+  transform: scale3d(1.08, 1.08, 1);
+}
+
+.p-8 {
+  padding: 2rem !important;
+}
+
+.m-8 {
+  @media only screen and (max-width: 800px) {
+    margin: 0rem !important;
+  }
+
+  @media only screen and (min-width: 800px) and (max-width: 1200px) {
+    margin: 1rem !important;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: 3rem !important;
+  }
+
+  margin: 3rem !important;
+}
+
 @keyframes dots {
   0%,
   20% {

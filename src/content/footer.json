@@ -1,12 +1,12 @@
 {
   "socialMediaButtons": [
     {
-      "iconName": "fab fa-linkedin",
+      "iconName": "linkedin",
       "label": "LinkedIn",
       "url": "https://www.linkedin.com/in/kevelopment"
     },
     {
-      "iconName": "fab fa-github",
+      "iconName": "github",
       "label": "Github",
       "url": "https://github.com/kevelopment"
     }

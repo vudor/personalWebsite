@@ -10,9 +10,11 @@ $dark: #38423c;
 $background-gradient: linear-gradient(to right, $primary, $primary-light);
 $background-gradient-reverse: linear-gradient(to left, $primary, $primary-light);
 
-html,
+html {
+  background-color: $primary;
+}
 body {
-  background-color: $light;
+  // background-color: $light;
 }
 
 .background-path {
