@@ -25,7 +25,7 @@ import { Element } from "react-scroll";
 import Routes from "../nav/Routes";
 
 export default function Skills() {
-  const size = "4em";
+  const size = "2.5em";
   const techStack = useMemo(
     () => ({
       frontend: {
@@ -43,7 +43,7 @@ export default function Skills() {
           <Nestjs size={size} title="NestJS" />,
           <Spring size={size} title="Spring (Boot)" />,
           <Prisma size={size} title="Prisma" />,
-          <Postgresql size={size} title="Prisma" />,
+          <Postgresql size={size} title="PostgreSQL" />,
         ],
       },
       cloud: {
