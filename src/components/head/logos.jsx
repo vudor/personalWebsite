@@ -1,4 +1,4 @@
-import { Angular, Gatsby, Nestjs, Nextdotjs, Nodedotjs, ReactJs, Spring } from "@icons-pack/react-simple-icons";
+import { Angular, Gatsby, Graphql, Nestjs, Nextdotjs, Nodedotjs, ReactJs, Spring } from "@icons-pack/react-simple-icons";
 import React from "react";
 
 const logoSize = 32;
@@ -50,6 +50,12 @@ const logos = [
     label: "NestJS",
     logo: (
       <Nestjs size={logoSize} color="#E0234E" style={styles.logo} title="NestJS" />
+    ),
+  },
+  {
+    label: "GraphQL",
+    logo: (
+      <Graphql size={logoSize} color="#E10098" style={styles.logo} title="GraphQL" />
     ),
   },
   {

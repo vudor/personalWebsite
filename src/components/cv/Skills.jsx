@@ -6,6 +6,7 @@ import {
   Gatsby,
   Github,
   Gitlab,
+  Graphql,
   Heroku,
   Jira,
   Nestjs,
@@ -58,6 +59,7 @@ export default function Skills() {
         label: "Modern Technologies",
         icons: [
           <Github size={size} title="Github" />,
+          <Graphql size={size} title="GraphQL" />,
           <Gitlab size={size} title="Gitlab" />,
           <Jira size={size} title="Jira" />,
           <Nx size={size} title="Nx" />,
