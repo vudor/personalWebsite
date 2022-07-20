@@ -1,10 +1,10 @@
 import React from "react";
 import * as Scroll from "react-scroll";
 import footerData from "../../content/footer.json";
+import useFooterData from "../../hooks/useFooterData";
 import LegalNotice from "../buttons/LegalNotice";
 import SocialMediaButton from "../buttons/SocialMediaButton";
 import "./footer.scss";
-import useFooterData from "../../hooks/useFooterData";
 
 function Footer() {
   const { socialMediaButtons } = footerData;
@@ -38,7 +38,7 @@ function Footer() {
             <hr className="footer-divider" />
           </div>
           <LegalNotice />
-          <div className="has-text-light">
+          <div className="has-text-light py-2">
             <p>
               {"© 2021 with "}
               <a target="_blank" rel="noreferrer" className="has-text-info" href="https://www.gatsbyjs.com">
