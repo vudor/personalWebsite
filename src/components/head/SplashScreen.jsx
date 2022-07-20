@@ -1,10 +1,10 @@
 import { StaticImage } from "gatsby-plugin-image";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Bounce, Flip } from "react-reveal";
 import Typist from "react-typist";
 
 const NBSP = "\xa0";
-const INTERVAL_DURATION = 2200;
+const INTERVAL_DURATION = 2500;
 
 const imageSize = 180;
 const borderRadius = 128;
@@ -38,12 +38,12 @@ const styles = {
 export default function SplashScreen({ entries, breakText = false }) {
   const [tech, setTech] = useState(entries[0]);
 
-  useEffect(() => {
-    const getRandomElement = () => {
-      const randIndex = Math.floor(Math.random() * entries.length);
-      return entries[randIndex];
-    };
+  const getRandomElement = useCallback(() =>
+    // eslint-disable-next-line react/prop-types
+    entries[Math.floor(Math.random() * entries.length)]
+    , [entries]);
 
+  useEffect(() => {
     const interval = setInterval(() => {
       let next = getRandomElement();
       while (next.label === tech.label) {

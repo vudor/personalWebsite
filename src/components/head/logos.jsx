@@ -1,13 +1,11 @@
-import { StaticImage } from "gatsby-plugin-image";
+import { Angular, Gatsby, Nestjs, Nextdotjs, Nodedotjs, ReactJs, Spring } from "@icons-pack/react-simple-icons";
 import React from "react";
 
 const logoSize = 32;
 const styles = {
   logo: {
     verticalAlign: "middle",
-    width: logoSize,
-    height: logoSize,
-    marginBottom: 2,
+    marginBottom: 4,
   },
 };
 
@@ -15,97 +13,49 @@ const logos = [
   {
     label: "Node.js",
     logo: (
-      <StaticImage
-        width={logoSize}
-        height={logoSize}
-        style={styles.logo}
-        alt="Node.js Logo"
-        src="../../images/logos/nodejs-logo.png"
-      />
+      <Nodedotjs size={logoSize} color="#339933" style={styles.logo} title="Node.js" />
     ),
   },
   {
     label: "Angular",
     logo: (
-      <StaticImage
-        width={logoSize}
-        height={logoSize}
-        style={styles.logo}
-        alt="Angular Logo"
-        src="../../images/logos/angular-logo.png"
-      />
+      <Angular size={logoSize} color="#DD0031" style={styles.logo} title="Angular (2+)" />
     ),
   },
   {
     label: "React",
     logo: (
-      <StaticImage
-        width={logoSize}
-        height={logoSize}
-        style={styles.logo}
-        alt="React Logo"
-        src="../../images/logos/react-logo.png"
-      />
+      <ReactJs size={logoSize} color="#61DAFB" style={styles.logo} title="React" />
     ),
   },
   {
     label: "Next.js",
     logo: (
-      <StaticImage
-        width={logoSize}
-        height={logoSize}
-        style={styles.logo}
-        alt="Next.js Logo"
-        src="../../images/logos/nextjs-logo.png"
-      />
+      <Nextdotjs size={logoSize} color="#000000" style={styles.logo} title="Next.js" />
     ),
   },
   {
     label: "Gatsby",
     logo: (
-      <StaticImage
-        width={logoSize}
-        height={logoSize}
-        style={styles.logo}
-        alt="Gatsby Logo"
-        src="../../images/logos/gatsby-logo.png"
-      />
+      <Gatsby size={logoSize} color="#663399" style={styles.logo} title="Gatsby" />
     ),
   },
   {
     label: "React-Native",
     logo: (
-      <StaticImage
-        width={logoSize}
-        height={logoSize}
-        style={styles.logo}
-        alt="React-Native Logo"
-        src="../../images/logos/react-logo.png"
-      />
+      <ReactJs size={logoSize} color="#61DAFB" style={styles.logo} title="React-Native" />
     ),
   },
   {
     label: "NestJS",
     logo: (
-      <StaticImage
-        width={logoSize}
-        height={logoSize}
-        style={styles.logo}
-        alt="NestJS Logo"
-        src="../../images/logos/nestjs-logo.png"
-      />
+      <Nestjs size={logoSize} color="#E0234E" style={styles.logo} title="NestJS" />
     ),
   },
   {
     label: "Spring Boot",
     logo: (
-      <StaticImage
-        width={logoSize}
-        height={logoSize}
-        style={styles.logo}
-        alt="Spring Boot Logo"
-        src="../../images/logos/spring-boot-logo.png"
-      />
+      <Spring size={logoSize} color="#6DB33F" style={styles.logo} title="Spring (Boot)" />
     ),
   },
 ];
