@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./LegalNotice.scss";
 import useLegalNoticeData from "../../hooks/useLegalNoticeData";
+import "./LegalNotice.scss";
 
 function LegalNotice() {
   const { html } = useLegalNoticeData();
@@ -33,7 +33,7 @@ function LegalNotice() {
           </div>
         </div>
       ) : (
-        <></>
+        null
       )}
     </>
   );
