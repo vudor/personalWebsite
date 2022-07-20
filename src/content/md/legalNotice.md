@@ -8,7 +8,7 @@ Müggenweg 15\
 26133 Oldenburg\
 Deutschland
 
-**Tel.**: +49 1578 7839985\
+**Tel.**: +49 175 9926078\
 **Mail**: [info@kevelopment.dev](mailto:info@kevelopment.dev?subject=[Impressum]%20Nachfrage)
 
 **Berufsbezeichnung**: Freelance Software-Developer
