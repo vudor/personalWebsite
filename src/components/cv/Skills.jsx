@@ -99,21 +99,20 @@ export default function Skills() {
                   {Object.entries(techStack).map(([key, value]) => (
                     <li className="is-size-5 py-4 my-4" key={key}>
                       {value.icons?.length ? (
-                        <ul>
+                        <div>
                           <Fade top cascade>
                             {value.icons.map((entry) => (
-                              <span className="px-3 mx-3 has-text-primary">
-                                {typeof entry === "string" ? <i className={`${entry} fa-4x`} /> : entry}
+                              <span className="m-3 has-text-primary">
+                                {typeof entry === "string" ? <i className={`${entry} fa-3x`} /> : entry}
                               </span>
                             ))}
                           </Fade>
-                        </ul>
+                        </div>
                       ) : null}
                       {value.label ? (
                         <Fade>
                           <span>
-                            <span className="is-size-4">{value.label}</span>&nbsp;
-                            <span className="icon has-text-secondary">
+                            <span className="is-size-4">{value.label}</span>&nbsp;<span className="icon has-text-secondary">
                               <i className="fas fa-check" />
                             </span>
                           </span>

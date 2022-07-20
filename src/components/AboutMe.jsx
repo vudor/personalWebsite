@@ -2,24 +2,28 @@ import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { Fade } from "react-reveal";
 import { Element } from "react-scroll";
-import Routes from "./nav/Routes";
 import useAboutMeData from "../hooks/useAboutMeData";
+import useWindowDimensions from "../hooks/useWindowDimensions";
+import Routes from "./nav/Routes";
 
 const roundBorders = {
   borderRadius: 6,
   WebkitBorderRadius: 6,
 };
 const maxHeight = 550;
+const breakpoint = 768;
 
 function AboutMe() {
   const { html } = useAboutMeData();
+  const { width } = useWindowDimensions();
+
   return (
     <Element name={Routes.ABOUTME}>
       <section className="hero is-light is-fullheight gradient-primary-background py-6">
         <div className="hero-body is-primary">
           <div className="container">
             <div className="columns">
-              <Fade left>
+              <Fade left={width >= breakpoint} right={width < breakpoint}>
                 <div className="column is-flex is-align-items-center" style={roundBorders}>
                   <StaticImage
                     style={({ maxHeight }, roundBorders)}
@@ -28,7 +32,7 @@ function AboutMe() {
                       ({
                         maxHeight,
                       },
-                      roundBorders)
+                        roundBorders)
                     }
                     src="../images/kevin.jpeg"
                     alt="Me"
