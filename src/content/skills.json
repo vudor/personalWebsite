@@ -1,16 +1,10 @@
 {
   "qualities": [
-    "Frontend-Development using state of the art Frameworks and Design Guidelines",
-    "Backend-Development following Clean-Code-Principles",
-    "Cloud-Development with AWS or Firebase",
-    "Integrative End-2-End Testing with Selenium or Cypress",
-    "Experience in agile interdisciplinary Teams",
+    "State of the Art Frontend-Development",
+    "Clean-Code Backend-Development",
+    "Cloud-Development: AWS - Heroku - Firebase",
+    "Integrative End-2-End Testing",
+    "Experienced Team player",
     "High level of Comprehension and adaptability"
-  ],
-  "techStack": {
-    "languages": ["fab fa-js-square", "fab fa-java"],
-    "frameworks": ["fab fa-angular", "fab fa-react", "fab fa-node"],
-    "tools": ["fab fa-gulp", "fab fa-jira", "fab fa-npm", "fab fa-yarn"],
-    "misc": ["fab fa-aws", "fab fa-github", "fab fa-gitlab", "fab fa-jenkins"]
-  }
+  ]
 }

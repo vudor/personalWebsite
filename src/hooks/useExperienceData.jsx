@@ -4,7 +4,7 @@ const GET_EXPERIENCE_DATA = graphql`
   {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(experience)/" } }
-      sort: { fields: [frontmatter___start, frontmatter___end], order: DESC }
+      sort: { fields: [frontmatter___start], order: DESC }
     ) {
       nodes {
         html

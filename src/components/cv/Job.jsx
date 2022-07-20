@@ -27,7 +27,7 @@ export default function Job({ description, title, company, start, end, showDivid
               <p>{company}</p>
             </div>
             <div className="level-right">
-              <p>{`${start} - ${end}`}</p>
+              <p>{start && end ? `${start} - ${end}` : `since ${start}`}</p>
             </div>
           </div>
         </h2>
