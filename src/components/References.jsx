@@ -3,18 +3,21 @@ import {
   Amazondynamodb,
   Apachetomcat,
   Awsamplify,
-  Bulma, Coinmarketcap,
+  Bulma,
+  Coinmarketcap,
   Debian,
   Gatsby,
-  Heroku, Hibernate, Mui,
+  Heroku,
+  Hibernate,
+  Mui,
   Nestjs,
   Nextdotjs,
   Postgresql,
   Prisma,
-  ReactJs, Riotgames,
+  ReactJs,
+  Riotgames,
   Spring,
   Stackoverflow,
-  Vercel
 } from "@icons-pack/react-simple-icons";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
@@ -25,32 +28,21 @@ import "./references.scss";
 const projects = [
   {
     name: "DokuCoach",
+    client: "DokuCoach GmbH",
     // description:
     //   "Lorem ipsizzle dolor fizzle shizzle my nizzle crocodizzle, cool adipiscing elit. Yippiyo fo shizzle velizzle, away volutpizzle, bling bling quizzle, gravida vel, da bomb. Lorem ipsizzle dolor fizzle shizzle my nizzle crocodizzle",
     stack: [
       <ReactJs title="React" color="#61DAFB" />,
       <Nestjs title="NestJS" color="#E0234E" />,
       <Postgresql title="PostgreSQL" color="#4169E1" />,
-      <Heroku title="Heroku" color="#430098" />
+      <Heroku title="Heroku" color="#430098" />,
     ],
     image: <StaticImage alt="doku-coach application" src="../images/projects/dokucoach.png" />,
-    homepage: "https://www.doku-coach.de"
+    homepage: "https://www.doku-coach.de",
   },
   {
-    name: "SBL - School Book Orders",
-    // description:
-    //   "Lorem ipsizzle dolor fizzle shizzle my nizzle crocodizzle, cool adipiscing elit. Yippiyo fo shizzle velizzle, away volutpizzle, bling bling quizzle, gravida vel, da bomb. Lorem ipsizzle dolor fizzle shizzle my nizzle crocodizzle",
-    image: <StaticImage alt="school-book-orders application" src="../images/projects/school-book-orders.png" />,
-    stack: [
-      <Nextdotjs title="Next.js" color="#000000" />,
-      <Mui title="Material UI Component Library" color="#007FFF" />,
-      <Prisma title="Prisma" color="#2D3748" />,
-      <Postgresql title="PostgreSQL" color="#4169E1" />,
-      <Heroku title="Heroku" color="#430098" />
-    ]
-  },
-  {
-    name: "Cryptohunt",
+    name: "cryptohunt.it",
+    client: "Aircooled Ventures, Inc.",
     homepage: "https://www.cryptohunt.it",
     // description:
     //   "Lorem ipsizzle dolor fizzle shizzle my nizzle crocodizzle, cool adipiscing elit. Yippiyo fo shizzle velizzle, away volutpizzle, bling bling quizzle, gravida vel, da bomb. Lorem ipsizzle dolor fizzle shizzle my nizzle crocodizzle",
@@ -60,20 +52,35 @@ const projects = [
       <Nestjs title="NestJS" color="#E0234E" />,
       <Prisma title="Prisma" color="#2D3748" />,
       <Postgresql title="PostgreSQL" color="#4169E1" />,
-      <Coinmarketcap title="Coinmarketcap API" color="#17181B"/>,
-    ]
+      <Coinmarketcap title="Coinmarketcap API" color="#17181B" />,
+    ],
   },
   {
-    name: "Hitcap",
+    name: "hitcap.gg",
+    client: "Hitcap eSports GmbH",
     homepage: "https://www.hitcap.gg",
     image: <StaticImage alt="hitcap application" src="../images/projects/hitcap.png" />,
     stack: [
       <ReactJs title="React" color="#61DAFB" />,
       <Awsamplify title="AWS Amplify" color="#FF9900" />,
       <Amazondynamodb title="AWS DynamoDB" color="#4053D6" />,
-      <Amazonaws title="Amazon Web Services (AWS)" color="#232F3E"/>,
-      <Riotgames title="Riot API" color="#D32936"/>
-    ]
+      <Amazonaws title="Amazon Web Services (AWS)" color="#232F3E" />,
+      <Riotgames title="Riot API" color="#D32936" />,
+    ],
+  },
+  {
+    name: "School Book Orders",
+    client: "SBL Fulfilment GmbH",
+    // description:
+    //   "Lorem ipsizzle dolor fizzle shizzle my nizzle crocodizzle, cool adipiscing elit. Yippiyo fo shizzle velizzle, away volutpizzle, bling bling quizzle, gravida vel, da bomb. Lorem ipsizzle dolor fizzle shizzle my nizzle crocodizzle",
+    image: <StaticImage alt="school-book-orders application" src="../images/projects/school-book-orders.png" />,
+    stack: [
+      <Nextdotjs title="Next.js" color="#000000" />,
+      <Mui title="Material UI Component Library" color="#007FFF" />,
+      <Prisma title="Prisma" color="#2D3748" />,
+      <Postgresql title="PostgreSQL" color="#4169E1" />,
+      <Heroku title="Heroku" color="#430098" />,
+    ],
   },
   // {
   //   name: "moreEvent",
@@ -83,6 +90,7 @@ const projects = [
   // },
   {
     name: "moreDirect",
+    client: "meetingmasters.de e.K.",
     homepage: "https://direct.meetingmasters.de/direct/r/LocationSearch.action",
     image: <StaticImage alt="moreDirect application" src="../images/projects/moredirect.png" />,
     stack: [
@@ -90,19 +98,20 @@ const projects = [
       <Hibernate title="Hibernate" color="#59666C" />,
       <Apachetomcat title="Apache Tomcat" color="#D22128" />,
       <Postgresql title="PostgreSQL" color="#4169E1" />,
-      <Debian title="Debian" color="#A81D33" />
-    ]
+      <Debian title="Debian" color="#A81D33" />,
+    ],
   },
   {
-    name: "Recursion",
+    name: "recursion",
+    client: "Kevelopment",
     homepage: "https://www.kevelopment.dev",
     image: <StaticImage alt="kevelopment website" src="../images/projects/kevelopment.png" />,
     stack: [
       <Gatsby title="Gatsby" color="#663399" />,
       <Bulma title="Bulma" color="#00D1B2" />,
-      <Stackoverflow title="Stackoverflow" color="#F58025" />
-    ]
-  }
+      <Stackoverflow title="Stackoverflow" color="#F58025" />,
+    ],
+  },
   // {
   //   name: "Dog License Trainer",
   //   homepage: "https://doggo.kevelopment.dev",
@@ -134,6 +143,7 @@ export default function References() {
                     ) : (
                       project.image
                     ))}
+                  <p className="is-size-6 pb-4">© {project.client}</p>
                   {project.description && <div className="content py-4">{project.description}</div>}
                   {project.stack?.length && (
                     <div className="content text-vertical-align pt-4">
