@@ -34,14 +34,27 @@ const styles = {
   },
 };
 
+const image = (
+  <StaticImage
+    height={imageSize}
+    width={imageSize}
+    style={styles.avatar}
+    imgStyle={{ borderRadius }}
+    alt="Profile Picture of Kevin"
+    src="../../images/profile.jpg"
+  />
+);
+
 // eslint-disable-next-line react/prop-types
 export default function SplashScreen({ entries, breakText = false }) {
   const [tech, setTech] = useState(entries[0]);
 
-  const getRandomElement = useCallback(() =>
-    // eslint-disable-next-line react/prop-types
-    entries[Math.floor(Math.random() * entries.length)]
-    , [entries]);
+  const getRandomElement = useCallback(
+    () =>
+      // eslint-disable-next-line react/prop-types
+      entries[Math.floor(Math.random() * entries.length)],
+    [entries]
+  );
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -73,14 +86,7 @@ export default function SplashScreen({ entries, breakText = false }) {
     <Bounce left>
       <div className="container">
         <div className="column is-narrow-desktop is-narrow-tablet is-full-mobile is-flex is-justify-content-center">
-          <StaticImage
-            height={imageSize}
-            width={imageSize}
-            style={styles.avatar}
-            imgStyle={{ borderRadius }}
-            alt="Profile Picture"
-            src="../../images/profile.jpg"
-          />
+          {image}
         </div>
         <div className="columns">
           <div style={styles.text} className="column is-full-mobile">
