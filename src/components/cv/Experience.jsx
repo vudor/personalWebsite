@@ -14,7 +14,7 @@ export default function Experience() {
       <section className="hero is-light gradient-primary-background">
         <BackgroundSvg height={200} elements={paths} />
       </section>
-      <section className="hero py-2 is-light">
+      <section className="hero is-light is-medium">
         <div className="hero-body">
           <div className="container has-text-centered">
             <p className="title">{title}</p>

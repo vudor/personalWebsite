@@ -1,23 +1,11 @@
 import React from "react";
-import useWindowDimensions from "../../hooks/useWindowDimensions";
 import "./job.scss";
 
 // eslint-disable-next-line react/prop-types
 export default function Job({ description, title, company, start, end, showDivider = false }) {
-  const { width } = useWindowDimensions();
-
-  let spacing = "mx-6 my-2 p-6";
-  if (width > 768) {
-    spacing = "mx-2 my-2 p-6";
-  } else if (width > 480 && width <= 768) {
-    spacing = "mx-2";
-  } else if (width <= 480) {
-    spacing = "";
-  }
-
   return (
     <>
-      <section className={`section ${spacing}`}>
+      <section className={`hero-body`}>
         <h1 className="title has-text-primary" style={{ textTransform: "uppercase" }}>
           {title}
         </h1>

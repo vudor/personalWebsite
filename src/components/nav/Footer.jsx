@@ -29,7 +29,7 @@ function Footer() {
               </span>
             </button>
           </div>
-          <div className="social-links">
+          <div className="social-links my-4">
             {socialMediaButtons.map(({ iconName, label, url }) => (
               <SocialMediaButton key={`${iconName} - ${label}`} iconClass={iconName} label={label} url={url} />
             ))}

@@ -2,23 +2,22 @@ import {
   Amazonaws,
   Amazondynamodb,
   Apachetomcat,
-  Awsamplify,
-  Debian,
+  Awsamplify, Bulma,
+  Debian, Gatsby,
   Heroku,
   Nestjs,
   Nextdotjs,
   Postgresql,
   Prisma,
   ReactJs,
-  Spring,
-  Vercel,
+  Spring, Stackoverflow,
+  Vercel
 } from "@icons-pack/react-simple-icons";
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { Element } from "react-scroll";
-import references from "../content/references.json";
 import Routes from "./nav/Routes";
 import "./references.scss";
-import { StaticImage } from "gatsby-plugin-image";
 
 const projects = [
   {
@@ -51,7 +50,7 @@ const projects = [
     homepage: "https://www.cryptohunt.it",
     // description:
     //   "Lorem ipsizzle dolor fizzle shizzle my nizzle crocodizzle, cool adipiscing elit. Yippiyo fo shizzle velizzle, away volutpizzle, bling bling quizzle, gravida vel, da bomb. Lorem ipsizzle dolor fizzle shizzle my nizzle crocodizzle",
-    image: <StaticImage alt="school-book-orders application" src="../images/projects/cryptohunt.png" />,
+    image: <StaticImage alt="cryptohunt application" src="../images/projects/cryptohunt.png" />,
     stack: [
       <Nextdotjs title="Next.js" />,
       <Prisma title="Prisma" />,
@@ -62,7 +61,7 @@ const projects = [
   {
     name: "Hitcap",
     homepage: "https://www.hitcap.gg",
-    image: <StaticImage alt="school-book-orders application" src="../images/projects/hitcap.png" />,
+    image: <StaticImage alt="hitcap application" src="../images/projects/hitcap.png" />,
     stack: [
       <Awsamplify title="AWS Amplify" />,
       <ReactJs title="React" />,
@@ -79,19 +78,30 @@ const projects = [
   {
     name: "moreDirect",
     homepage: "https://direct.meetingmasters.de/direct/r/LocationSearch.action",
-    image: <StaticImage alt="school-book-orders application" src="../images/projects/moredirect.png" />,
+    image: <StaticImage alt="moreDirect application" src="../images/projects/moredirect.png" />,
     stack: [<Spring />, <Apachetomcat />, <Postgresql />, <Debian />],
   },
+  {
+    name: "Recursion",
+    homepage: "https://www.kevelopment.dev",
+    image: <StaticImage alt="kevelopment website" src="../images/projects/kevelopment.png" />,
+    stack: [<Gatsby />, <Bulma />, <Stackoverflow/>],
+  },
+  // {
+  //   name: "Dog License Trainer",
+  //   homepage: "https://doggo.kevelopment.dev",
+  //   image: <StaticImage alt="doggo trainer website" src="../images/projects/dog-license.png" />,
+  //   stack: [<ReactJs />],
+  // },
 ];
 
 export default function References() {
-  const { title, subtitle } = references;
   return (
     <Element name={Routes.REFERENCES}>
       <section className="hero is-light is-medium">
         <div className="hero-body">
           <div className="container has-text-centered is-spaced">
-            <p className="title">{title}</p>
+            <p className="title">Project Portfolio</p>
           </div>
         </div>
         <div className="hero-body pt-0">
