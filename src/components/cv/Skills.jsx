@@ -1,13 +1,13 @@
 import {
   Amazonaws,
   Angular,
-  Cypress,
+  Cypress, Figma,
   Firebase,
-  Gatsby,
+  Gatsby, Git,
   Github,
   Gitlab,
   Graphql,
-  Heroku,
+  Heroku, Jest,
   Jira,
   Nestjs,
   Nextdotjs,
@@ -58,10 +58,11 @@ export default function Skills() {
       misc: {
         label: "Modern Technologies",
         icons: [
+          <Git size={size} title="Git" />,
           <Github size={size} title="Github" />,
           <Graphql size={size} title="GraphQL" />,
-          <Gitlab size={size} title="Gitlab" />,
           <Jira size={size} title="Jira" />,
+          <Figma size={size} title="Figma" />,
           <Nx size={size} title="Nx" />,
         ],
       },
@@ -75,7 +76,11 @@ export default function Skills() {
       },
       e2e: {
         label: "Integrative End-2-End Testing",
-        icons: [<Cypress size={size} title="Cypress.io" />, <Selenium size={size} title="Selenium" />],
+        icons: [
+          <Cypress size={size} title="Cypress.io" />,
+          <Jest size={size} title="Jest"/>,
+          <Selenium size={size} title="Selenium" />
+        ],
       },
       "teamwork-makes-the-dream-work": {
         label: "Experienced Team player",
