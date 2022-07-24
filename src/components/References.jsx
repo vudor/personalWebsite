@@ -18,6 +18,7 @@ import {
   Riotgames,
   Spring,
   Stackoverflow,
+  Vercel,
 } from "@icons-pack/react-simple-icons";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
@@ -102,22 +103,28 @@ const projects = [
     ],
   },
   {
+    name: "Dog License Trainer",
+    client: "Kevelopment",
+    homepage: "https://doggo.kevelopment.dev",
+    image: <StaticImage alt="doggo trainer website" src="../images/projects/doggo.png" />,
+    stack: [
+      <Nextdotjs title="Next.js" color="#000000" />,
+      <Mui title="Material UI Component Library" color="#007FFF" />,
+      <Vercel title="Vercel" />,
+    ],
+  },
+  {
     name: "recursion",
     client: "Kevelopment",
     homepage: "https://www.kevelopment.dev",
     image: <StaticImage alt="kevelopment website" src="../images/projects/kevelopment.png" />,
     stack: [
       <Gatsby title="Gatsby" color="#663399" />,
+      <Vercel title="Vercel" />,
       <Bulma title="Bulma" color="#00D1B2" />,
       <Stackoverflow title="Stackoverflow" color="#F58025" />,
     ],
   },
-  // {
-  //   name: "Dog License Trainer",
-  //   homepage: "https://doggo.kevelopment.dev",
-  //   image: <StaticImage alt="doggo trainer website" src="../images/projects/dog-license.png" />,
-  //   stack: [<ReactJs />],
-  // },
 ];
 
 export default function References() {
