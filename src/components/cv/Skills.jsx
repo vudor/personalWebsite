@@ -1,13 +1,15 @@
 import {
   Amazonaws,
   Angular,
-  Cypress, Figma,
+  Cypress,
+  Figma,
   Firebase,
-  Gatsby, Git,
+  Gatsby,
+  Git,
   Github,
-  Gitlab,
   Graphql,
-  Heroku, Jest,
+  Heroku,
+  Jest,
   Jira,
   Nestjs,
   Nextdotjs,
@@ -18,7 +20,7 @@ import {
   ReactJs,
   Selenium,
   Spring,
-  Typescript
+  Typescript,
 } from "@icons-pack/react-simple-icons";
 import React, { useMemo } from "react";
 import { Fade } from "react-reveal";
@@ -48,7 +50,7 @@ export default function Skills() {
         ],
       },
       cloud: {
-        label: "Cloud-Development: AWS - Heroku - Firebase",
+        label: "Cloud-Development: Heroku - Firebase - AWS",
         icons: [
           <Heroku size={size} title="Heroku" />,
           <Firebase size={size} title="Firebase" />,
@@ -78,8 +80,8 @@ export default function Skills() {
         label: "Integrative End-2-End Testing",
         icons: [
           <Cypress size={size} title="Cypress.io" />,
-          <Jest size={size} title="Jest"/>,
-          <Selenium size={size} title="Selenium" />
+          <Jest size={size} title="Jest" />,
+          <Selenium size={size} title="Selenium" />,
         ],
       },
       "teamwork-makes-the-dream-work": {
@@ -119,7 +121,8 @@ export default function Skills() {
                       {value.label ? (
                         <Fade>
                           <span>
-                            <span className="is-size-4">{value.label}</span>&nbsp;<span className="icon has-text-secondary">
+                            <span className="is-size-4">{value.label}</span>&nbsp;
+                            <span className="icon has-text-secondary">
                               <i className="fas fa-check" />
                             </span>
                           </span>
