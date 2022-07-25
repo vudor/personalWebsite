@@ -110,7 +110,7 @@ const projects = [
     stack: [
       <Nextdotjs title="Next.js" color="#000000" />,
       <Mui title="Material UI Component Library" color="#007FFF" />,
-      <Vercel title="Vercel" />,
+      <Vercel title="Vercel" color="#000000" />,
     ],
   },
   {
@@ -120,8 +120,8 @@ const projects = [
     image: <StaticImage alt="kevelopment website" src="../images/projects/kevelopment.png" />,
     stack: [
       <Gatsby title="Gatsby" color="#663399" />,
-      <Vercel title="Vercel" />,
       <Bulma title="Bulma" color="#00D1B2" />,
+      <Vercel title="Vercel" color="#000000" />,
       <Stackoverflow title="Stackoverflow" color="#F58025" />,
     ],
   },
