@@ -1,10 +1,10 @@
 import React from "react";
 import { Element } from "react-scroll";
 import experience from "../../content/experience.json";
+import useExperienceData from "../../hooks/useExperienceData";
 import BackgroundSvg from "../background/BackgroundSvg";
 import Routes from "../nav/Routes";
 import Job from "./Job";
-import useExperienceData from "../../hooks/useExperienceData";
 
 export default function Experience() {
   const { title, subtitle, paths } = experience;
@@ -14,7 +14,7 @@ export default function Experience() {
       <section className="hero is-light gradient-primary-background">
         <BackgroundSvg height={200} elements={paths} />
       </section>
-      <section className="hero is-light is-medium">
+      <section className="hero is-light">
         <div className="hero-body">
           <div className="container has-text-centered">
             <p className="title">{title}</p>

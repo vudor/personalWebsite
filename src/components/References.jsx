@@ -4,9 +4,7 @@ import {
   Apachetomcat,
   Awsamplify,
   Bulma,
-  Coinmarketcap,
-  Debian,
-  Gatsby,
+  Coinmarketcap, Gatsby,
   Heroku,
   Hibernate,
   Mui,
@@ -18,7 +16,7 @@ import {
   Riotgames,
   Spring,
   Stackoverflow,
-  Vercel,
+  Vercel
 } from "@icons-pack/react-simple-icons";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
@@ -83,12 +81,18 @@ const projects = [
       <Heroku title="Heroku" color="#430098" />,
     ],
   },
-  // {
-  //   name: "moreEvent",
-  //   homepage: "https://www.meetingmasters.de/leistungen/teilnehmermanagement",
-  // image: "src/images/projects/moreEvent.png",
-  //   stack: [<Spring />, <Postgresql />],
-  // },
+  {
+    name: "moreEvent",
+    client: "meetingmasters.de e.K.",
+    homepage: "https://www.meetingmasters.de/leistungen/teilnehmermanagement",
+    image: <StaticImage alt="moreDirect application" src="../images/projects/moreevent.png" />,
+    stack: [
+      <Spring title="Spring (Boot)" color="#6DB33F" />,
+      <Hibernate title="Hibernate" color="#59666C" />,
+      <Postgresql title="PostgreSQL" color="#4169E1" />,
+      <Apachetomcat title="Apache Tomcat" color="#D22128" />,
+    ],
+  },
   {
     name: "moreDirect",
     client: "meetingmasters.de e.K.",
@@ -96,10 +100,8 @@ const projects = [
     image: <StaticImage alt="moreDirect application" src="../images/projects/moredirect.png" />,
     stack: [
       <Spring title="Spring (Boot)" color="#6DB33F" />,
-      <Hibernate title="Hibernate" color="#59666C" />,
-      <Apachetomcat title="Apache Tomcat" color="#D22128" />,
       <Postgresql title="PostgreSQL" color="#4169E1" />,
-      <Debian title="Debian" color="#A81D33" />,
+      <Apachetomcat title="Apache Tomcat" color="#D22128" />,
     ],
   },
   {
@@ -170,7 +172,7 @@ export default function References() {
               <i className="fas fa-hard-hat fa-4x" />
             </span>
             <p className="subtitle">
-              Wanna be listed as well? <br /> Let&apos;s get In touch 👇
+              Wanna be listed as well? <br /> Let&apos;s get In touch👇🏼
             </p>
           </div>
         </div>

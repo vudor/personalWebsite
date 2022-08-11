@@ -5,7 +5,7 @@ import "./job.scss";
 export default function Job({ description, title, company, start, end, showDivider = false }) {
   return (
     <>
-      <section className={`hero-body`}>
+      <section className="hero-body">
         <h1 className="title has-text-primary" style={{ textTransform: "uppercase" }}>
           {title}
         </h1>
