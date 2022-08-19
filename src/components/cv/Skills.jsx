@@ -20,7 +20,7 @@ import {
   ReactJs,
   Selenium,
   Spring,
-  Typescript,
+  Typescript
 } from "@icons-pack/react-simple-icons";
 import React, { useMemo } from "react";
 import { Fade } from "react-reveal";
@@ -100,6 +100,7 @@ export default function Skills() {
         <div className="hero-body">
           <div className="container has-text-centered">
             <p className="title">Skills</p>
+            <p className="subtitle">Qualifications &bull; Frameworks &bull; Tools</p>
           </div>
           <section className="section">
             <div className="has-text-centered">

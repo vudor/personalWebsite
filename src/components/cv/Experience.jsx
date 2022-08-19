@@ -7,7 +7,7 @@ import Routes from "../nav/Routes";
 import Job from "./Job";
 
 export default function Experience() {
-  const { title, subtitle, paths } = experience;
+  const { paths } = experience;
   const { nodes } = useExperienceData();
   return (
     <Element name={Routes.EXPERIENCE}>
@@ -17,8 +17,8 @@ export default function Experience() {
       <section className="hero is-light">
         <div className="hero-body">
           <div className="container has-text-centered">
-            <p className="title">{title}</p>
-            <p className="subtitle">{subtitle}</p>
+            <p className="title">Experience</p>
+            <p className="subtitle">Profession &bull; Education</p>
           </div>
         </div>
         {nodes.map(({ frontmatter, html }, index) => (

@@ -40,7 +40,7 @@ const projects = [
     homepage: "https://www.doku-coach.de",
   },
   {
-    name: "cryptohunt.it",
+    name: "Cryptohunt",
     client: "Aircooled Ventures, Inc.",
     homepage: "https://www.cryptohunt.it",
     // description:
@@ -55,7 +55,7 @@ const projects = [
     ],
   },
   {
-    name: "hitcap.gg",
+    name: "Hitcap.gg",
     client: "Hitcap eSports GmbH",
     homepage: "https://www.hitcap.gg",
     image: <StaticImage alt="hitcap application" src="../images/projects/hitcap.png" />,
@@ -116,7 +116,7 @@ const projects = [
     ],
   },
   {
-    name: "recursion",
+    name: "Portfolio Website",
     client: "Kevelopment",
     homepage: "https://www.kevelopment.dev",
     image: <StaticImage alt="kevelopment website" src="../images/projects/kevelopment.png" />,
