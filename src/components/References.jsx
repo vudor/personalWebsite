@@ -172,7 +172,7 @@ export default function References() {
               <i className="fas fa-hard-hat fa-4x" />
             </span>
             <p className="subtitle">
-              Wanna be listed as well? <br /> Let&apos;s get In touch👇🏼
+              Wanna be listed as well? <br /> Drop me a message&nbsp;👇🏼
             </p>
           </div>
         </div>
