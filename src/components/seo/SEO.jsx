@@ -11,7 +11,7 @@ function SEO() {
       <html lang={lang} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="utf-8" content="text/html" />
-      <meta name="google-site-verification" content="ZKnE5oGSiZc6X0Y__sqJG1bRdQPwiBXjHYvhxL0THa8" />
+      <meta name="google-site-verification" content="q8yR-dQtcpS226CtIxSP3iAwC1cT1UTpI1DcqkFvibQ" />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(",")} />
       <meta name="image" content={image} />
