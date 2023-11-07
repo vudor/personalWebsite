@@ -1,6 +1,6 @@
 import React from "react";
 import * as Scroll from "react-scroll";
-import {SiBulma, Gatsby, SiGatsby} from "@icons-pack/react-simple-icons";
+import { SiBulma, Gatsby, SiGatsby } from "@icons-pack/react-simple-icons";
 import footerData from "../../content/footer.json";
 import LegalNotice from "../buttons/LegalNotice";
 import SocialMediaButton from "../buttons/SocialMediaButton";
@@ -78,12 +78,11 @@ function Footer() {
                 </span>{" "}
               </a>
             </p>
-            <p>Copyright © 2021 - 2023 <a
-                rel="author"
-                className="has-text-info"
-                title="author"
-                href="https://www.kevelopment.dev"
-            >Kevin Adam</a>
+            <p>
+              Copyright © 2021 - 2023{" "}
+              <a rel="author" className="has-text-info" title="author" href="https://www.kevelopment.dev">
+                Kevin Adam
+              </a>
             </p>
           </div>
         </div>

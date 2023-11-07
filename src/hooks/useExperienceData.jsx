@@ -3,8 +3,8 @@ import { graphql, useStaticQuery } from "gatsby";
 const GET_EXPERIENCE_DATA = graphql`
   {
     allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(experience)/"}}
-      sort: {frontmatter: {start: DESC}}
+      filter: { fileAbsolutePath: { regex: "/(experience)/" } }
+      sort: { frontmatter: { start: DESC } }
     ) {
       nodes {
         html

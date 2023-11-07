@@ -3,4 +3,3 @@ export default Object.freeze({
   IMPRESS: "/impress",
   ABOUT: "/about",
 });
-

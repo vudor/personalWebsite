@@ -32,7 +32,7 @@ function AboutMe() {
                       ({
                         maxHeight,
                       },
-                        roundBorders)
+                      roundBorders)
                     }
                     src="../images/kevin.jpeg"
                     alt="Picture of me in the nature"

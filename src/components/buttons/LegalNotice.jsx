@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import useLegalNoticeData from "../../hooks/useLegalNoticeData";
+import { Link } from "gatsby";
 import "./LegalNotice.scss";
-import {Link} from "gatsby";
 import Pages from "../nav/Pages";
 
 function LegalNotice() {
@@ -35,9 +35,15 @@ function LegalNotice() {
           </div>
         </div>
       ) : null}
-      <Link to={Pages.IMPRESS} style={{display: "none"}} title="Impress">Impressum</Link>
-      <Link to={Pages.ABOUT} style={{display: "none"}} title="About me">About Me</Link>
-      <Link to={Pages.HOME} style={{display: "none"}} title="Home">Home</Link>
+      <Link to={Pages.IMPRESS} style={{ display: "none" }} title="Impress">
+        Impressum
+      </Link>
+      <Link to={Pages.ABOUT} style={{ display: "none" }} title="About me">
+        About Me
+      </Link>
+      <Link to={Pages.HOME} style={{ display: "none" }} title="Home">
+        Home
+      </Link>
     </>
   );
 }
