@@ -1,7 +1,7 @@
 import React from "react";
 import useSeoData from "../../hooks/useSeoData";
 
-export default function Head({ children }) {
+export default function Head() {
   const { title, author, lang, description, keywords, siteUrl } = useSeoData();
 
   return (
@@ -40,8 +40,7 @@ export default function Head({ children }) {
       />
       <meta name="twitter:card" content="summary" />
 
-      {/* Any additional Tags or Overrides */}
-      {children}
+      <link rel="canonical" href="https://kevelopment.dev/" />
     </>
   );
 }

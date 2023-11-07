@@ -49,7 +49,6 @@ const projects = [
   {
     name: "Cryptohunt",
     client: "Aircooled Ventures, Inc.",
-    homepage: "https://www.cryptohunt.it",
     // description:
     //   "Lorem ipsizzle dolor fizzle shizzle my nizzle crocodizzle, cool adipiscing elit. Yippiyo fo shizzle velizzle, away volutpizzle, bling bling quizzle, gravida vel, da bomb. Lorem ipsizzle dolor fizzle shizzle my nizzle crocodizzle",
     image: (
@@ -70,7 +69,6 @@ const projects = [
   {
     name: "Hitcap.gg",
     client: "Hitcap eSports GmbH",
-    homepage: "https://www.hitcap.gg",
     image: (
       <StaticImage
         alt="hitcap application"

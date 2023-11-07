@@ -25,7 +25,7 @@ module.exports = {
     ],
     lang: "en",
     description:
-      "Kevin Adam - the Freelance Web Developer from Oldenburg ready for your Project. You're a Start up looking for someone who can drive forward your MVP? Search no more and hit me up!",
+      "Kevin Adam - the Freelance Web Developer from Oldenburg ready for your Project. You're a Start up looking for someone who can drive forward your MVP? Hit me up!",
   },
   plugins: [
     "gatsby-plugin-sass",
