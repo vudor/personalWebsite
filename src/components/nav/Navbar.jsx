@@ -39,6 +39,7 @@ export default function Navbar() {
                   key={`${label}-${route}`}
                   className="navbar-item"
                   activeClass="is-active"
+                  title={label}
                   to={route}
                   spy
                   smooth

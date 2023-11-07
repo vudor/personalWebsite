@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import useLegalNoticeData from "../../hooks/useLegalNoticeData";
 import "./LegalNotice.scss";
+import {Link} from "gatsby";
+import Pages from "../nav/Pages";
 
 function LegalNotice() {
   const { html } = useLegalNoticeData();
@@ -33,6 +35,9 @@ function LegalNotice() {
           </div>
         </div>
       ) : null}
+      <Link to={Pages.IMPRESS} style={{display: "none"}} title="Impress">Impressum</Link>
+      <Link to={Pages.ABOUT} style={{display: "none"}} title="About me">About Me</Link>
+      <Link to={Pages.HOME} style={{display: "none"}} title="Home">Home</Link>
     </>
   );
 }

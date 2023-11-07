@@ -27,8 +27,8 @@ import { Fade } from "react-reveal";
 import { Element } from "react-scroll";
 import Routes from "../nav/Routes";
 
+const size = "2.5em";
 export default function Skills() {
-  const size = "2.5em";
   const techStack = useMemo(
     () => ({
       frontend: {
@@ -88,7 +88,7 @@ export default function Skills() {
         label: "Experienced Team player",
       },
       blushy: {
-        label: "High level of Comprehension and adaptability",
+        label: "Experience in Kanban, Scrum and SAFe",
       },
     }),
     []
