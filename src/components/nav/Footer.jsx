@@ -1,6 +1,6 @@
 import React from "react";
 import * as Scroll from "react-scroll";
-import { SiBulma, Gatsby, SiGatsby } from "@icons-pack/react-simple-icons";
+import { SiBulma, SiGatsby } from "@icons-pack/react-simple-icons";
 import footerData from "../../content/footer.json";
 import LegalNotice from "../buttons/LegalNotice";
 import SocialMediaButton from "../buttons/SocialMediaButton";

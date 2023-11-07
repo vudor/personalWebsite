@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import "./navbar.scss";
 import Routes from "./Routes";
+import Pages from "./Pages";
 
 const links = [
   { label: "Info", route: Routes.INFO },
@@ -52,6 +53,18 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+      <a href={Pages.IMPRESS} style={{ display: "none" }} title="Impress">
+        Impressum
+      </a>
+      <a href={Pages.ABOUT} style={{ display: "none" }} title="About me">
+        About Me
+      </a>
+      <a href={Pages.EXPERIENCE} style={{ display: "none" }} title="Experience">
+        Experience
+      </a>
+      <a href={Pages.HOME} style={{ display: "none" }} title="Home">
+        Home
+      </a>
     </nav>
   );
 }

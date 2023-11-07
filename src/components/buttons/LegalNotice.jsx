@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import useLegalNoticeData from "../../hooks/useLegalNoticeData";
-import { Link } from "gatsby";
 import "./LegalNotice.scss";
-import Pages from "../nav/Pages";
 
 function LegalNotice() {
   const { html } = useLegalNoticeData();
@@ -22,6 +20,7 @@ function LegalNotice() {
       {isOpen ? (
         <div className="modal-overlay blurred-container">
           <div className="legalnotice-modal elevation has-text-left">
+            {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
             <button onClick={closeModal} className="button is-light top-right" type="button">
               <span className="icon is-small">
                 <i className="fas fa-times" />
@@ -35,15 +34,6 @@ function LegalNotice() {
           </div>
         </div>
       ) : null}
-      <Link to={Pages.IMPRESS} style={{ display: "none" }} title="Impress">
-        Impressum
-      </Link>
-      <Link to={Pages.ABOUT} style={{ display: "none" }} title="About me">
-        About Me
-      </Link>
-      <Link to={Pages.HOME} style={{ display: "none" }} title="Home">
-        Home
-      </Link>
     </>
   );
 }

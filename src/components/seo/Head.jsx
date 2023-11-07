@@ -21,15 +21,14 @@ export default function Head() {
       <meta name="author" content={author} />
 
       {/* OpenGraph aka Facebook Tags */}
-      <meta name="og:title" content={title} />
-      <meta name="og:site_name" content={title} />
-      <meta name="og:description" content={description} />
-      <meta name="og:url" content={siteUrl} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={title} />
+      <meta property="og:url" content={siteUrl} />
+      <meta property="og:description" content={description} />
       <meta
         name="og:image"
         content="https://media.licdn.com/dms/image/C4D03AQGO3MR_R0e7Tg/profile-displayphoto-shrink_800_800/0/1633511356625?e=1704931200&v=beta&t=Jz-7-TqitVqx39waSjLsehBRDuZ-7vqOABOEPEHmQ7k"
       />
-      <meta name="og:type" content="website" />
 
       {/* Twitter Tags */}
       <meta name="twitter:title" content={title} />
@@ -38,9 +37,34 @@ export default function Head() {
         name="twitter:image"
         content="https://media.licdn.com/dms/image/C4D03AQGO3MR_R0e7Tg/profile-displayphoto-shrink_800_800/0/1633511356625?e=1704931200&v=beta&t=Jz-7-TqitVqx39waSjLsehBRDuZ-7vqOABOEPEHmQ7k"
       />
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content={description} />
 
-      <link rel="canonical" href="https://kevelopment.dev/" />
+      <link rel="canonical" href={siteUrl} />
+
+      <script type="application/ld+json">
+        {`
+          {
+              "@context": "http://schema.org/",
+              "@type": "Person",
+              "name": "Kevin Adam",
+              "image": "https://media.licdn.com/dms/image/C4D03AQGO3MR_R0e7Tg/profile-displayphoto-shrink_800_800/0/1633511356625?e=1704931200&v=beta&t=Jz-7-TqitVqx39waSjLsehBRDuZ-7vqOABOEPEHmQ7k",
+              "url": "https://www.kevelopment.dev",
+              "jobTitle": "Freelance Software Developmer",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Kevelopment · Software Development and Consulting"
+              },
+              "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Müggenweg 15",
+                  "addressLocality": "Oldenburg",
+                  "addressRegion": "Lower Saxony",
+                  "postalCode": "26133",
+                  "addressCountry": "Germany"
+              }
+          }
+        `}
+      </script>
     </>
   );
 }
