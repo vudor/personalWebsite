@@ -3,3 +3,8 @@
 @import "bulma";
 
 @import "./fontawesome/css/all.min.css";
+
+:root {
+  --fa-style-family: var(--fa-style-family-sharp);
+  --fa-style: 900;
+}
