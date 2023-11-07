@@ -1,99 +1,102 @@
 import {
-  Amazonaws,
-  Angular,
-  Cypress,
-  Figma,
-  Firebase,
-  Gatsby,
-  Git,
-  Github,
-  Graphql,
-  Heroku,
-  Jest,
-  Jira,
-  Nestjs,
-  Nextdotjs,
-  Nodedotjs,
-  Nx,
-  Postgresql,
-  Prisma,
-  ReactJs,
-  Selenium,
-  Spring,
-  Typescript
+    SiGraphql,
+    SiTypescript,
+    SiHeroku,
+    SiFirebase,
+    SiAmazonaws,
+    SiVercel,
+    SiNx,
+    SiFigma,
+    SiJira,
+    SiGithub,
+    SiGit,
+    SiNextdotjs,
+    SiGatsby,
+    SiAngular,
+    SiReact,
+    SiNestjs,
+    SiSpring,
+    SiPrisma,
+    SiPostgresql,
+    SiMongodb,
+    SiCypress,
+    SiJest,
+    SiSelenium,
+    SiPlaywright, SiNodedotjs, SiDocker
 } from "@icons-pack/react-simple-icons";
-import React, { useMemo } from "react";
+import React from "react";
 import { Fade } from "react-reveal";
 import { Element } from "react-scroll";
 import Routes from "../nav/Routes";
 
 const size = "2.5em";
-export default function Skills() {
-  const techStack = useMemo(
-    () => ({
-      frontend: {
-        label: "State of the Art Frontend-Development",
-        icons: [
-          <Nextdotjs size={size} title="Next.js" />,
-          <Gatsby size={size} title="Gatsby" />,
-          <Angular size={size} title="Angular (2+)" />,
-          <ReactJs size={size} title="React" />,
-        ],
-      },
-      backend: {
-        label: "Clean-Code Backend-Development",
-        icons: [
-          <Nestjs size={size} title="NestJS" />,
-          <Spring size={size} title="Spring (Boot)" />,
-          <Prisma size={size} title="Prisma" />,
-          <Postgresql size={size} title="PostgreSQL" />,
-        ],
-      },
-      cloud: {
-        label: "Cloud-Development: Heroku - Firebase - AWS",
-        icons: [
-          <Heroku size={size} title="Heroku" />,
-          <Firebase size={size} title="Firebase" />,
-          <Amazonaws size={size} title="AWS" />,
-        ],
-      },
-      misc: {
-        label: "Modern Technologies",
-        icons: [
-          <Git size={size} title="Git" />,
-          <Github size={size} title="Github" />,
-          <Graphql size={size} title="GraphQL" />,
-          <Jira size={size} title="Jira" />,
-          <Figma size={size} title="Figma" />,
-          <Nx size={size} title="Nx" />,
-        ],
-      },
-      languages: {
-        label: "Commonly used languages",
-        icons: [
-          <Typescript size={size} title="TypeScript" />,
-          <Nodedotjs size={size} title="JavaScript / Node.js" />,
-          "fab fa-java",
-        ],
-      },
-      e2e: {
-        label: "Integrative End-2-End Testing",
-        icons: [
-          <Cypress size={size} title="Cypress.io" />,
-          <Jest size={size} title="Jest" />,
-          <Selenium size={size} title="Selenium" />,
-        ],
-      },
-      "teamwork-makes-the-dream-work": {
-        label: "Experienced Team player",
-      },
-      blushy: {
-        label: "Experience in Kanban, Scrum and SAFe",
-      },
-    }),
-    []
-  );
+const techStack =
+     ({
+        frontend: {
+            label: "State of the Art Frontend-Development",
+            icons: [
+                <SiNextdotjs size={size} title="Next.js" />,
+                <SiGatsby size={size} title="Gatsby" />,
+                <SiReact size={size} title="React" />,
+                <SiAngular size={size} title="Angular (2+)" />,
+            ],
+        },
+        backend: {
+            label: "Clean-Code Backend-Development",
+            icons: [
+                <SiNestjs size={size} title="NestJS" />,
+                <SiSpring size={size} title="Spring (Boot)" />,
+                <SiPrisma size={size} title="Prisma" />,
+                <SiPostgresql size={size} title="PostgreSQL" />,
+                <SiMongodb size={size} title="Mongodb" />,
+            ],
+        },
+        cloud: {
+            label: "Cloud-Development: Heroku - Firebase - AWS",
+            icons: [
+                <SiAmazonaws size={size} title="AWS" />,
+                <SiHeroku size={size} title="Heroku" />,
+                <SiVercel size={size} title="Vercel" />,
+                <SiFirebase size={size} title="Firebase" />,
+            ],
+        },
+        misc: {
+            label: "Modern Technologies",
+            icons: [
+                <SiGit size={size} title="Git" />,
+                <SiGithub size={size} title="Github" />,
+                <SiDocker size={size} title="Docker" />,
+                <SiGraphql size={size} title="GraphQL" />,
+                <SiJira size={size} title="Jira" />,
+                <SiFigma size={size} title="Figma" />,
+            ],
+        },
+        languages: {
+            label: "Commonly used languages",
+            icons: [
+                <SiTypescript size={size} title="TypeScript" />,
+                <SiNodedotjs size={size} title="JavaScript / Node.js" />,
+                "fab fa-java",
+            ],
+        },
+        e2e: {
+            label: "Integrative End-2-End Testing",
+            icons: [
+                <SiCypress size={size} title="Cypress.io" />,
+                <SiPlaywright size={size} title="Playwright" />,
+                <SiJest size={size} title="Jest" />,
+                <SiSelenium size={size} title="Selenium" />,
+            ],
+        },
+        "teamwork-makes-the-dream-work": {
+            label: "Experienced Team player",
+        },
+        blushy: {
+            label: "Experience in Kanban, Scrum and SAFe",
+        },
+    });
 
+export default function Skills() {
   return (
     <Element name={Routes.SKILLS}>
       <section className="hero is-light is-medium">

@@ -1,6 +1,6 @@
 import React from "react";
 import * as Scroll from "react-scroll";
-import { Bulma, Gatsby } from "@icons-pack/react-simple-icons";
+import {SiBulma, Gatsby, SiGatsby} from "@icons-pack/react-simple-icons";
 import footerData from "../../content/footer.json";
 import LegalNotice from "../buttons/LegalNotice";
 import SocialMediaButton from "../buttons/SocialMediaButton";
@@ -49,7 +49,7 @@ function Footer() {
                 title="GatsbyJS"
                 href="https://www.gatsbyjs.com"
               >
-                <Gatsby size={14} />
+                <SiGatsby size={14} />
                 &nbsp;Gatsby
               </a>
               {", "}
@@ -61,7 +61,7 @@ function Footer() {
                 title="Bulma"
                 href="https://www.bulma.io"
               >
-                <Bulma size={14} />
+                <SiBulma size={14} />
                 &nbsp;Bulma
               </a>
               {" and "}

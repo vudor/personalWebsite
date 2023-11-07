@@ -1,9 +1,9 @@
-import { Github, Linkedin } from "@icons-pack/react-simple-icons";
+import {SiGithub, SiLinkedin} from "@icons-pack/react-simple-icons";
 import React from "react";
 
 const SocialMediaButtonIcons = {
-  linkedin: <Linkedin />,
-  github: <Github />,
+  linkedin: <SiLinkedin />,
+  github: <SiGithub />,
 };
 
 // eslint-disable-next-line react/prop-types
