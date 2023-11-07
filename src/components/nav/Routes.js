@@ -1,6 +1,6 @@
 export default Object.freeze({
   INFO: "info",
-  ABOUTME: "about-me",
+  ABOUT_ME: "about-me",
   EXPERIENCE: "experience",
   EDUCATION: "education",
   SKILLS: "skills",

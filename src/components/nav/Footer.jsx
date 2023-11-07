@@ -2,14 +2,14 @@ import React from "react";
 import * as Scroll from "react-scroll";
 import { Bulma, Gatsby } from "@icons-pack/react-simple-icons";
 import footerData from "../../content/footer.json";
-import useFooterData from "../../hooks/useFooterData";
 import LegalNotice from "../buttons/LegalNotice";
 import SocialMediaButton from "../buttons/SocialMediaButton";
 import "./footer.scss";
+import Routes from "./Routes";
+import {Link} from "gatsby";
 
 function Footer() {
   const { socialMediaButtons } = footerData;
-  const { author } = useFooterData();
   const scrollToTop = () => {
     Scroll.animateScroll.scrollToTop();
   };
@@ -77,7 +77,12 @@ function Footer() {
                 </span>{" "}
               </a>
             </p>
-            <p>{`© 2021 - 2022 ${author}`}</p>
+            <p>Copyright © 2021 - 2023 <a
+                rel="author"
+                className="has-text-info"
+                href=""
+            >Kevin Adam</a>
+            </p>
           </div>
         </div>
       </div>

@@ -6,10 +6,10 @@ export default function Job({ description, title, company, start, end, showDivid
   return (
     <>
       <section className="hero-body">
-        <h1 className="title has-text-primary" style={{ textTransform: "uppercase" }}>
+        <h4 className="title has-text-primary" style={{ textTransform: "uppercase" }}>
           {title}
-        </h1>
-        <h2 className="subtitle ">
+        </h4>
+        <h5 className="subtitle">
           <div className="level">
             <div className="level-left has-text-weight-medium">
               <p>{company}</p>
@@ -18,7 +18,7 @@ export default function Job({ description, title, company, start, end, showDivid
               <p>{start && end ? `${start} - ${end}` : `since ${start}`}</p>
             </div>
           </div>
-        </h2>
+        </h5>
         <div
           className="content"
           dangerouslySetInnerHTML={{

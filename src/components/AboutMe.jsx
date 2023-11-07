@@ -18,7 +18,7 @@ function AboutMe() {
   const { width } = useWindowDimensions();
 
   return (
-    <Element name={Routes.ABOUTME}>
+    <Element name={Routes.ABOUT_ME}>
       <section className="hero is-light is-fullheight gradient-primary-background py-6">
         <div className="hero-body is-primary">
           <div className="container">

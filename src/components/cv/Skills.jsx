@@ -99,8 +99,8 @@ export default function Skills() {
       <section className="hero is-light is-medium">
         <div className="hero-body">
           <div className="container has-text-centered">
-            <p className="title">Skills</p>
-            <p className="subtitle">Qualifications &bull; Frameworks &bull; Tools</p>
+            <h2 className="title">Skills</h2>
+            <h3 className="subtitle">Qualifications &bull; Frameworks &bull; Tools</h3>
           </div>
           <section className="section">
             <div className="has-text-centered">

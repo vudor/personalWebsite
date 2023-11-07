@@ -40,7 +40,7 @@ const image = (
     width={imageSize}
     style={styles.avatar}
     imgStyle={{ borderRadius }}
-    alt="Profile Picture of Kevin"
+    alt="Kevin Adams Profile Picture"
     src="../../images/profile.jpg"
   />
 );
@@ -84,6 +84,7 @@ export default function SplashScreen({ entries, breakText = false }) {
 
   return (
     <Bounce left>
+      <h1 style={{display: "none"}}>Kevin Adam - the freelance Web-Developer ready for your next Project</h1>
       <div className="container">
         <div className="column is-narrow-desktop is-narrow-tablet is-full-mobile is-flex is-justify-content-center">
           {image}

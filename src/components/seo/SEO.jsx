@@ -3,7 +3,7 @@ import React from "react";
 import useSeoData from "../../hooks/useSeoData";
 
 function SEO() {
-  const { title, titleTemplate, lang, description, keywords, siteUrl, image } = useSeoData();
+  const { title, titleTemplate, author, lang, description, keywords, siteUrl, image } = useSeoData();
 
   return (
     <Helmet title={title} titleTemplate={titleTemplate} htmlAttributes={{ lang }}>
@@ -15,6 +15,7 @@ function SEO() {
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(",")} />
       <meta name="image" content={image} />
+      <meta name="author" content={author} />
 
       {/* OpenGraph aka Facebook Tags */}
       <meta name="og:title" content={title} />

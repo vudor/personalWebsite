@@ -5,7 +5,7 @@ import Routes from "./Routes";
 
 const links = [
   { label: "Info", route: Routes.INFO },
-  { label: "About Me", route: Routes.ABOUTME },
+  { label: "About Me", route: Routes.ABOUT_ME },
   { label: "Experience", route: Routes.EXPERIENCE },
   { label: "Skills", route: Routes.SKILLS },
   { label: "References", route: Routes.REFERENCES },

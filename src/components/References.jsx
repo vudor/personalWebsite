@@ -68,7 +68,7 @@ const projects = [
     ],
   },
   {
-    name: "School Book Orders",
+    name: "School Book Order Platform",
     client: "SBL Fulfilment GmbH",
     // description:
     //   "Lorem ipsizzle dolor fizzle shizzle my nizzle crocodizzle, cool adipiscing elit. Yippiyo fo shizzle velizzle, away volutpizzle, bling bling quizzle, gravida vel, da bomb. Lorem ipsizzle dolor fizzle shizzle my nizzle crocodizzle",
@@ -84,7 +84,7 @@ const projects = [
   {
     name: "moreEvent",
     client: "meetingmasters.de e.K.",
-    homepage: "https://www.meetingmasters.de/leistungen/teilnehmermanagement",
+    homepage: "https://www.meetingmasters.de/teilnehmermanagement-moreevent",
     image: <StaticImage alt="moreDirect application" src="../images/projects/moreevent.png" />,
     stack: [
       <Spring title="Spring (Boot)" color="#6DB33F" />,
@@ -135,7 +135,8 @@ export default function References() {
       <section className="hero is-light is-medium">
         <div className="hero-body">
           <div className="container has-text-centered is-spaced">
-            <p className="title">Project Portfolio</p>
+            <h2 className="title">Portfolio</h2>
+            <h3 className="subtitle">Projects &bull; Products &bull; Partner</h3>
           </div>
         </div>
         <div className="hero-body pt-0">
