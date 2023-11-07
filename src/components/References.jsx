@@ -36,7 +36,7 @@ const projects = [
       <Postgresql title="PostgreSQL" color="#4169E1" />,
       <Heroku title="Heroku" color="#430098" />,
     ],
-    image: <StaticImage alt="doku-coach application" src="../images/projects/dokucoach.png" />,
+    image: <StaticImage alt="doku-coach application" title="DokuCoach @ DokuCoach GmbH" src="../images/projects/dokucoach.png" />,
     homepage: "https://www.doku-coach.de",
   },
   {
@@ -45,7 +45,7 @@ const projects = [
     homepage: "https://www.cryptohunt.it",
     // description:
     //   "Lorem ipsizzle dolor fizzle shizzle my nizzle crocodizzle, cool adipiscing elit. Yippiyo fo shizzle velizzle, away volutpizzle, bling bling quizzle, gravida vel, da bomb. Lorem ipsizzle dolor fizzle shizzle my nizzle crocodizzle",
-    image: <StaticImage alt="cryptohunt application" src="../images/projects/cryptohunt.png" />,
+    image: <StaticImage alt="cryptohunt application" title="Cryptohunt @ Aircooled Ventures, Inc." src="../images/projects/cryptohunt.png" />,
     stack: [
       <Nextdotjs title="Next.js" color="#000000" />,
       <Nestjs title="NestJS" color="#E0234E" />,
@@ -58,7 +58,7 @@ const projects = [
     name: "Hitcap.gg",
     client: "Hitcap eSports GmbH",
     homepage: "https://www.hitcap.gg",
-    image: <StaticImage alt="hitcap application" src="../images/projects/hitcap.png" />,
+    image: <StaticImage alt="hitcap application" title="hitcap.gg @ Hitcap eSports GmbH" src="../images/projects/hitcap.png" />,
     stack: [
       <ReactJs title="React" color="#61DAFB" />,
       <Awsamplify title="AWS Amplify" color="#FF9900" />,
@@ -70,9 +70,7 @@ const projects = [
   {
     name: "School Book Order Platform",
     client: "SBL Fulfilment GmbH",
-    // description:
-    //   "Lorem ipsizzle dolor fizzle shizzle my nizzle crocodizzle, cool adipiscing elit. Yippiyo fo shizzle velizzle, away volutpizzle, bling bling quizzle, gravida vel, da bomb. Lorem ipsizzle dolor fizzle shizzle my nizzle crocodizzle",
-    image: <StaticImage alt="school-book-orders application" src="../images/projects/school-book-orders.png" />,
+    image: <StaticImage alt="school-book-orders application" title="School Book Order Platform @ SBL Fulfilment GmbH" src="../images/projects/school-book-orders.png" />,
     stack: [
       <Nextdotjs title="Next.js" color="#000000" />,
       <Mui title="Material UI Component Library" color="#007FFF" />,
@@ -85,7 +83,7 @@ const projects = [
     name: "moreEvent",
     client: "meetingmasters.de e.K.",
     homepage: "https://www.meetingmasters.de/teilnehmermanagement-moreevent",
-    image: <StaticImage alt="moreDirect application" src="../images/projects/moreevent.png" />,
+    image: <StaticImage alt="moreEvent application" title="moreEvent @ meetingmasters.de e.K." src="../images/projects/moreevent.png" />,
     stack: [
       <Spring title="Spring (Boot)" color="#6DB33F" />,
       <Hibernate title="Hibernate" color="#59666C" />,
@@ -97,7 +95,7 @@ const projects = [
     name: "moreDirect",
     client: "meetingmasters.de e.K.",
     homepage: "https://direct.meetingmasters.de/direct/r/LocationSearch.action",
-    image: <StaticImage alt="moreDirect application" src="../images/projects/moredirect.png" />,
+    image: <StaticImage alt="moreDirect application" title="moreDirect @ meetingmasters.de e.K." src="../images/projects/moredirect.png" />,
     stack: [
       <Spring title="Spring (Boot)" color="#6DB33F" />,
       <Postgresql title="PostgreSQL" color="#4169E1" />,
@@ -108,7 +106,7 @@ const projects = [
     name: "Dog License Trainer",
     client: "Kevelopment",
     homepage: "https://doggo.kevelopment.dev",
-    image: <StaticImage alt="doggo trainer website" src="../images/projects/doggo.png" />,
+    image: <StaticImage alt="doggo trainer website" title="Dog License Trainer @ Kevelopment" src="../images/projects/doggo.png" />,
     stack: [
       <Nextdotjs title="Next.js" color="#000000" />,
       <Mui title="Material UI Component Library" color="#007FFF" />,
@@ -119,7 +117,7 @@ const projects = [
     name: "Portfolio Website",
     client: "Kevelopment",
     homepage: "https://www.kevelopment.dev",
-    image: <StaticImage alt="kevelopment website" src="../images/projects/kevelopment.png" />,
+    image: <StaticImage alt="kevelopment portfolio website" title="Portfolio Website @ Kevelopment" src="../images/projects/kevelopment.png" />,
     stack: [
       <Gatsby title="Gatsby" color="#663399" />,
       <Bulma title="Bulma" color="#00D1B2" />,
@@ -147,7 +145,7 @@ export default function References() {
                   <p className="is-size-4 pb-4">{project.name}</p>
                   {project.image &&
                     (project.homepage ? (
-                      <a href={project.homepage} target="_blank" rel="noreferrer">
+                      <a href={project.homepage} target="_blank" rel="noreferrer" title={`${project.name} @ ${project.client}`}>
                         {project.image}
                       </a>
                     ) : (

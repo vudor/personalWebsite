@@ -6,13 +6,13 @@ import Skills from "../components/cv/Skills";
 import Info from "../components/head/Info";
 import Footer from "../components/nav/Footer";
 import References from "../components/References";
-import Seo from "../components/seo/SEO";
+import Head from "../components/seo/Head";
 import "../scss/styles.scss";
 
 function IndexPage() {
   return (
     <>
-      <Seo />
+      <Head />
       <Info />
       <AboutMe />
       <Experience />

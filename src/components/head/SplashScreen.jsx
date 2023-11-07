@@ -41,6 +41,7 @@ const image = (
     style={styles.avatar}
     imgStyle={{ borderRadius }}
     alt="Kevin Adams Profile Picture"
+    title="Kevin ADams Profile Picture"
     src="../../images/profile.jpg"
   />
 );

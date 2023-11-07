@@ -5,7 +5,6 @@ const GET_SEO_DATA = graphql`
     site {
       siteMetadata {
         title
-        titleTemplate
         lang
         keywords
         description
@@ -18,7 +17,6 @@ const GET_SEO_DATA = graphql`
 
 const useSeoData = () => {
   const { site } = useStaticQuery(GET_SEO_DATA);
-  console.log({ site });
   return site.siteMetadata;
 };
 

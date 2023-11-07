@@ -1,7 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Kevelopment",
-    titleTemplate: "%s · Freelance Software Development and Consulting",
+    title: "Kevelopment · Freelance Software Development and Consulting",
     author: "Kevin Adam",
     siteUrl: "https://www.kevelopment.dev",
     image: "src/images/profile.png",
@@ -12,7 +11,9 @@ module.exports = {
       "web developer",
       "full stack developer",
       "application web developer",
-      "frontend developer",
+      "senior frontend developer",
+      "react developer",
+      "next.js developer",
       "backend developer",
       "mobile developer",
       "freelancer oldenburg",
@@ -20,7 +21,7 @@ module.exports = {
       "freelance web developer",
       "freelancer start up",
       "mvp development",
-      "minimal viable product"
+      "minimal viable product",
     ],
     lang: "en",
     description: "Kevin Adam - the Freelance Web Developer from Oldenburg ready for your Project. You're a Start up looking for someone who can drive forward your MVP? Search no more and hit me up!",
@@ -31,7 +32,6 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-transformer-remark",
-    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-robots-txt",

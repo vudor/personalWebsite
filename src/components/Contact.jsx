@@ -14,7 +14,7 @@ export default function Contact() {
           <div className="container has-text-centered pb-6">
             <h2 className="title has-text-light">{title}</h2>
             <h3 className="subtitle has-text-light">{subtitle}</h3>
-            <a href="mailto:info@kevelopment.dev" rel="author" className="button is-white is-outlined is-rounded">
+            <a href="mailto:info@kevelopment.dev" rel="author" className="button is-white is-outlined is-rounded" title="contact me">
               <span className="icon is-medium">
                 <i className="fa-lg far fa-paper-plane" />
               </span>

@@ -14,6 +14,7 @@ export default function SocialMediaButton({ iconClass, label, url }) {
       aria-label={`Social Media Button to ${label}`}
       target="_blank"
       rel="noreferrer"
+      title={label}
       className="button is-outlined is-light is-rounded mx-4"
     >
       <span className="icon fa-2x">{SocialMediaButtonIcons[iconClass]}</span>

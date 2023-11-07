@@ -5,8 +5,6 @@ import footerData from "../../content/footer.json";
 import LegalNotice from "../buttons/LegalNotice";
 import SocialMediaButton from "../buttons/SocialMediaButton";
 import "./footer.scss";
-import Routes from "./Routes";
-import {Link} from "gatsby";
 
 function Footer() {
   const { socialMediaButtons } = footerData;
@@ -48,6 +46,7 @@ function Footer() {
                 aria-label="Link to Gatsby Homepage"
                 rel="noreferrer"
                 className="has-text-info"
+                title="GatsbyJS"
                 href="https://www.gatsbyjs.com"
               >
                 <Gatsby size={14} />
@@ -59,6 +58,7 @@ function Footer() {
                 aria-label="Link to Bulma Homepage"
                 rel="noreferrer"
                 className="has-text-info"
+                title="Bulma"
                 href="https://www.bulma.io"
               >
                 <Bulma size={14} />
@@ -70,6 +70,7 @@ function Footer() {
                 aria-label="Youtube Link"
                 rel="noreferrer"
                 className="has-text-info"
+                title="rickroll"
                 href="https://youtu.be/3rzgrP7VA_Q?t=14"
               >
                 <span className="icon has-text-info">
@@ -80,7 +81,8 @@ function Footer() {
             <p>Copyright © 2021 - 2023 <a
                 rel="author"
                 className="has-text-info"
-                href=""
+                title="author"
+                href="https://www.kevelopment.dev"
             >Kevin Adam</a>
             </p>
           </div>

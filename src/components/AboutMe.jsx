@@ -35,7 +35,8 @@ function AboutMe() {
                         roundBorders)
                     }
                     src="../images/kevin.jpeg"
-                    alt="Me"
+                    alt="Picture of me in the nature"
+                    title="Picture of me in the nature"
                   />
                 </div>
               </Fade>
