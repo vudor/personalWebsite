@@ -18,7 +18,7 @@ export default function Experience() {
         <div className="hero-body">
           <div className="container has-text-centered">
             <h2 className="title">Experience</h2>
-            <h3 className="subtitle">Profession &bull; Education</h3>
+            <h3 className="subtitle">What Professions &bull; Education did I receive?</h3>
           </div>
         </div>
         {nodes.map(({ frontmatter, html }, index) => (

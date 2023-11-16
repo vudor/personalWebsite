@@ -181,7 +181,7 @@ export default function References() {
         <div className="hero-body">
           <div className="container has-text-centered is-spaced">
             <h2 className="title">Portfolio</h2>
-            <h3 className="subtitle">Projects &bull; Products &bull; Partner</h3>
+            <h3 className="subtitle">What Products &bull; Projects &bull; Partners have I supported?</h3>
           </div>
         </div>
         <div className="hero-body pt-0">

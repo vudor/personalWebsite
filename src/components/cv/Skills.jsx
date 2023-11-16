@@ -52,12 +52,11 @@ const techStack = {
     ],
   },
   cloud: {
-    label: "Cloud-Development: Heroku - Firebase - AWS",
+    label: "Cloud-Development: Heroku - AWS",
     icons: [
       <SiAmazonaws size={size} title="AWS" />,
       <SiHeroku size={size} title="Heroku" />,
       <SiVercel size={size} title="Vercel" />,
-      <SiFirebase size={size} title="Firebase" />,
     ],
   },
   misc: {
@@ -92,7 +91,7 @@ const techStack = {
     label: "Experienced Team player",
   },
   blushy: {
-    label: "Experience in Kanban, Scrum and SAFe",
+    label: "Agile Mindset: Kanban, Scrum and SAFe",
   },
 };
 
@@ -103,7 +102,9 @@ export default function Skills() {
         <div className="hero-body">
           <div className="container has-text-centered">
             <h2 className="title">Skills</h2>
-            <h3 className="subtitle">Qualifications &bull; Frameworks &bull; Tools</h3>
+            <h4 className="subtitle">
+              Which Qualifications &bull; Frameworks &bull; Tools can I bring into your project?
+            </h4>
           </div>
           <section className="section">
             <div className="has-text-centered">

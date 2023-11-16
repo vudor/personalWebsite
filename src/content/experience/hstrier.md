@@ -10,7 +10,7 @@ Acquisition of the academic degree Bachelor of Science with following majors
 - Development of distributed and parallel Systems
 - Mobile app development
 - IT Security
-- Seminar: TensorFlow - Convolutional Neural Networks
+- Machine Learning (TensorFlow, Convolutional Neural Networks) 
 
 **Thesis**
 \
