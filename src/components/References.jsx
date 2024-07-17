@@ -8,15 +8,19 @@ import {
   SiGatsby,
   SiHeroku,
   SiHibernate,
+  SiMongodb,
   SiMui,
   SiNestjs,
   SiNextdotjs,
+  SiNodedotjs,
   SiPostgresql,
   SiPrisma,
   SiReact,
   SiRiotgames,
   SiSpring,
+  SiSpringboot,
   SiStackoverflow,
+  SiTypescript,
   SiVercel,
 } from "@icons-pack/react-simple-icons";
 import { StaticImage } from "gatsby-plugin-image";
@@ -26,6 +30,38 @@ import Routes from "./nav/Routes";
 import "./references.scss";
 
 const projects = [
+  {
+    name: "Porsche Purchasing Platform", 
+    client: "Porsche Digital GmbH",
+    homepage: "https://sell.porsche.com",
+    stack: [
+      <SiReact title="React" color="#61DAFB" />,
+      <SiNestjs title="NestJS" color="#E0234E" />,
+      <SiMongodb title="MongoDB" color="#69e371" />,
+      <SiVercel title="Vercel" color="#000000" />,
+    ],
+    image: (<StaticImage
+      alt="Landing Page of Sell your Porsche"
+      title="Sell your Porsche @ Porsche Digital GmbH"
+      src="../images/projects/sell-your-porsche.png"
+    />)
+  },
+  {
+    name: "Porsche Finder", 
+    client: "Porsche Digital GmbH", 
+    homepage: "https://finder.porsche.com",
+    stack: [
+      <SiReact title="React" color="#61DAFB" />,
+      <SiSpring title="Spring (Boot)" color="#6DB33F" />,
+      <SiPostgresql title="PostgreSQL" color="#4169E1" />,
+      <SiAmazonaws title="Amazon Web Services (AWS)" color="#232F3E" />,
+    ],
+    image: (<StaticImage
+      alt="Landing Page of Porsche Finder Platform"
+      title="Porsche Finder @ Porsche Digital GmbH"
+      src="../images/projects/porsche-finder.png"
+    />)
+  },
   {
     name: "DokuCoach",
     client: "DokuCoach GmbH",
@@ -46,26 +82,24 @@ const projects = [
     ),
     homepage: "https://www.doku-coach.de",
   },
-  {
-    name: "Cryptohunt",
-    client: "Aircooled Ventures, Inc.",
-    // description:
-    //   "Lorem ipsizzle dolor fizzle shizzle my nizzle crocodizzle, cool adipiscing elit. Yippiyo fo shizzle velizzle, away volutpizzle, bling bling quizzle, gravida vel, da bomb. Lorem ipsizzle dolor fizzle shizzle my nizzle crocodizzle",
-    image: (
-      <StaticImage
-        alt="cryptohunt application"
-        title="Cryptohunt @ Aircooled Ventures, Inc."
-        src="../images/projects/cryptohunt.png"
-      />
-    ),
-    stack: [
-      <SiNextdotjs title="Next.js" color="#000000" />,
-      <SiNestjs title="NestJS" color="#E0234E" />,
-      <SiPrisma title="Prisma" color="#2D3748" />,
-      <SiPostgresql title="PostgreSQL" color="#4169E1" />,
-      <SiCoinmarketcap title="Coinmarketcap API" color="#17181B" />,
-    ],
-  },
+  // {
+  //   name: "Cryptohunt",
+  //   client: "Aircooled Ventures, Inc.",
+  //   image: (
+  //     <StaticImaged
+  //       alt="cryptohunt application"
+  //       title="Cryptohunt @ Aircooled Ventures, Inc."
+  //       src="../images/projects/cryptohunt.png"
+  //     />
+  //   ),
+  //   stack: [
+  //     <SiNextdotjs title="Next.js" color="#000000" />,
+  //     <SiNestjs title="NestJS" color="#E0234E" />,
+  //     <SiPrisma title="Prisma" color="#2D3748" />,
+  //     <SiPostgresql title="PostgreSQL" color="#4169E1" />,
+  //     <SiCoinmarketcap title="Coinmarketcap API" color="#17181B" />,
+  //   ],
+  // },
   {
     name: "Hitcap.gg",
     client: "Hitcap eSports GmbH",
@@ -84,24 +118,24 @@ const projects = [
       <SiRiotgames title="Riot API" color="#D32936" />,
     ],
   },
-  {
-    name: "School Book Order Platform",
-    client: "SBL Fulfilment GmbH",
-    image: (
-      <StaticImage
-        alt="school-book-orders application"
-        title="School Book Order Platform @ SBL Fulfilment GmbH"
-        src="../images/projects/school-book-orders.png"
-      />
-    ),
-    stack: [
-      <SiNextdotjs title="Next.js" color="#000000" />,
-      <SiMui title="Material UI Component Library" color="#007FFF" />,
-      <SiPrisma title="Prisma" color="#2D3748" />,
-      <SiPostgresql title="PostgreSQL" color="#4169E1" />,
-      <SiHeroku title="Heroku" color="#430098" />,
-    ],
-  },
+  // {
+  //   name: "School Book Order Platform",
+  //   client: "SBL Fulfilment GmbH",
+  //   image: (
+  //     <StaticImage
+  //       alt="school-book-orders application"
+  //       title="School Book Order Platform @ SBL Fulfilment GmbH"
+  //       src="../images/projects/school-book-orders.png"
+  //     />
+  //   ),
+  //   stack: [
+  //     <SiNextdotjs title="Next.js" color="#000000" />,
+  //     <SiMui title="Material UI Component Library" color="#007FFF" />,
+  //     <SiPrisma title="Prisma" color="#2D3748" />,
+  //     <SiPostgresql title="PostgreSQL" color="#4169E1" />,
+  //     <SiHeroku title="Heroku" color="#430098" />,
+  //   ],
+  // },
   {
     name: "moreEvent",
     client: "meetingmasters.de e.K.",
