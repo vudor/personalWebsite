@@ -4,11 +4,11 @@
 
 \
 Kevelopment - Software-Development and -Consulting\
-Müggenweg 15\
-26133 Oldenburg\
+Auf dem Berg 15\
+54558 Strohn\
 Deutschland
 
-**Tel.**: +49 175 9926078\
+**Tel.**: +49 1578 7839985\
 **Mail**: [info@kevelopment.dev](mailto:info@kevelopment.dev?subject=[Impressum]%20Nachfrage)
 
 **Berufsbezeichnung**: Freelance Software-Developer
