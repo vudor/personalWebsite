@@ -24,6 +24,7 @@ import {
   SiPlaywright,
   SiNodedotjs,
   SiDocker,
+  SiStorybook,
 } from "@icons-pack/react-simple-icons";
 import React from "react";
 import { Fade } from "react-reveal";
@@ -35,10 +36,10 @@ const techStack = {
   frontend: {
     label: "State of the Art Frontend-Development",
     icons: [
-      <SiNextdotjs size={size} title="Next.js" />,
-      <SiGatsby size={size} title="Gatsby" />,
       <SiReact size={size} title="React" />,
-      <SiAngular size={size} title="Angular (2+)" />,
+      <SiNextdotjs size={size} title="Next.js" />,
+      <SiStorybook size={size} title="React" />,
+      <SiGatsby size={size} title="Gatsby" />,
     ],
   },
   backend: {
@@ -52,7 +53,7 @@ const techStack = {
     ],
   },
   cloud: {
-    label: "Cloud-Development: Heroku - AWS",
+    label: "Cloud-Development",
     icons: [
       <SiAmazonaws size={size} title="AWS" />,
       <SiHeroku size={size} title="Heroku" />,
@@ -64,10 +65,10 @@ const techStack = {
     icons: [
       <SiGit size={size} title="Git" />,
       <SiGithub size={size} title="Github" />,
+      <SiFigma size={size} title="Figma" />,
       <SiDocker size={size} title="Docker" />,
       <SiGraphql size={size} title="GraphQL" />,
       <SiJira size={size} title="Jira" />,
-      <SiFigma size={size} title="Figma" />,
     ],
   },
   languages: {
@@ -81,8 +82,8 @@ const techStack = {
   e2e: {
     label: "Integrative End-2-End Testing",
     icons: [
-      <SiCypress size={size} title="Cypress.io" />,
       <SiPlaywright size={size} title="Playwright" />,
+      <SiCypress size={size} title="Cypress.io" />,
       <SiJest size={size} title="Jest" />,
       <SiSelenium size={size} title="Selenium" />,
     ],
