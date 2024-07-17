@@ -79,7 +79,7 @@ function Footer() {
               </a>
             </p>
             <p>
-              Copyright © 2021 - 2023{" "}
+              Copyright © 2021 - {new Date().getFullYear()}{" "}
               <a rel="author" className="has-text-info" title="author" href="https://www.kevelopment.dev">
                 Kevin Adam
               </a>
